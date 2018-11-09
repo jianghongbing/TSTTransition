@@ -1,0 +1,407 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE3A25962193C72A005D0F7F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3A25952193C72A005D0F7F /* AppDelegate.m */; };
+		CE3A259E2193C737005D0F7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE3A259D2193C737005D0F7F /* Assets.xcassets */; };
+		CE3A25A12193C737005D0F7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE3A259F2193C737005D0F7F /* LaunchScreen.storyboard */; };
+		CE3A25A42193C737005D0F7F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3A25A32193C737005D0F7F /* main.m */; };
+		CE3A25AD2193C8DF005D0F7F /* TabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3A25AC2193C8DF005D0F7F /* TabbarController.m */; };
+		CE3A25B02193C9F1005D0F7F /* FirstNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3A25AF2193C9F1005D0F7F /* FirstNavigationController.m */; };
+		CE3A25B32193CA0E005D0F7F /* SecondNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3A25B22193CA0E005D0F7F /* SecondNavigationController.m */; };
+		CE3A25B62193CA45005D0F7F /* TestAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3A25B52193CA45005D0F7F /* TestAViewController.m */; };
+		CE3A25BC2193CE90005D0F7F /* TestBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3A25BB2193CE90005D0F7F /* TestBViewController.m */; };
+		CE3A25BF2193CFBF005D0F7F /* UIViewController+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3A25BE2193CFBF005D0F7F /* UIViewController+Utils.m */; };
+		CE3A25C12193D4B7005D0F7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE3A25C02193D4B7005D0F7F /* Main.storyboard */; };
+		CE3A25C42193D8D7005D0F7F /* TSTAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3A25C32193D8D7005D0F7F /* TSTAnimator.m */; };
+		CE3A25C72193DC18005D0F7F /* TSTTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3A25C62193DC18005D0F7F /* TSTTransition.m */; };
+		CE3A25CA2193E732005D0F7F /* TSTInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3A25C92193E732005D0F7F /* TSTInteractiveTransition.m */; };
+		CE3A25D02193EAEE005D0F7F /* UIViewController+TSTTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3A25CF2193EAEE005D0F7F /* UIViewController+TSTTransition.m */; };
+		CE3A25D32194219E005D0F7F /* TSTTransitionGlobalSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3A25D22194219E005D0F7F /* TSTTransitionGlobalSetting.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CE3A25912193C72A005D0F7F /* TecentSportTransition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TecentSportTransition.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE3A25942193C72A005D0F7F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CE3A25952193C72A005D0F7F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CE3A259D2193C737005D0F7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE3A25A02193C737005D0F7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CE3A25A22193C737005D0F7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE3A25A32193C737005D0F7F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CE3A25AB2193C8DF005D0F7F /* TabbarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabbarController.h; sourceTree = "<group>"; };
+		CE3A25AC2193C8DF005D0F7F /* TabbarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabbarController.m; sourceTree = "<group>"; };
+		CE3A25AE2193C9F1005D0F7F /* FirstNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstNavigationController.h; sourceTree = "<group>"; };
+		CE3A25AF2193C9F1005D0F7F /* FirstNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstNavigationController.m; sourceTree = "<group>"; };
+		CE3A25B12193CA0E005D0F7F /* SecondNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondNavigationController.h; sourceTree = "<group>"; };
+		CE3A25B22193CA0E005D0F7F /* SecondNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondNavigationController.m; sourceTree = "<group>"; };
+		CE3A25B42193CA45005D0F7F /* TestAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestAViewController.h; sourceTree = "<group>"; };
+		CE3A25B52193CA45005D0F7F /* TestAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestAViewController.m; sourceTree = "<group>"; };
+		CE3A25BA2193CE90005D0F7F /* TestBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestBViewController.h; sourceTree = "<group>"; };
+		CE3A25BB2193CE90005D0F7F /* TestBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestBViewController.m; sourceTree = "<group>"; };
+		CE3A25BD2193CFBF005D0F7F /* UIViewController+Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Utils.h"; sourceTree = "<group>"; };
+		CE3A25BE2193CFBF005D0F7F /* UIViewController+Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Utils.m"; sourceTree = "<group>"; };
+		CE3A25C02193D4B7005D0F7F /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		CE3A25C22193D8D7005D0F7F /* TSTAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSTAnimator.h; sourceTree = "<group>"; };
+		CE3A25C32193D8D7005D0F7F /* TSTAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSTAnimator.m; sourceTree = "<group>"; };
+		CE3A25C52193DC18005D0F7F /* TSTTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSTTransition.h; sourceTree = "<group>"; };
+		CE3A25C62193DC18005D0F7F /* TSTTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSTTransition.m; sourceTree = "<group>"; };
+		CE3A25C82193E732005D0F7F /* TSTInteractiveTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSTInteractiveTransition.h; sourceTree = "<group>"; };
+		CE3A25C92193E732005D0F7F /* TSTInteractiveTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSTInteractiveTransition.m; sourceTree = "<group>"; };
+		CE3A25CE2193EAEE005D0F7F /* UIViewController+TSTTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TSTTransition.h"; sourceTree = "<group>"; };
+		CE3A25CF2193EAEE005D0F7F /* UIViewController+TSTTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TSTTransition.m"; sourceTree = "<group>"; };
+		CE3A25D12194219E005D0F7F /* TSTTransitionGlobalSetting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSTTransitionGlobalSetting.h; sourceTree = "<group>"; };
+		CE3A25D22194219E005D0F7F /* TSTTransitionGlobalSetting.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSTTransitionGlobalSetting.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE3A258E2193C72A005D0F7F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE3A25882193C729005D0F7F = {
+			isa = PBXGroup;
+			children = (
+				CE3A25932193C72A005D0F7F /* TecentSportTransition */,
+				CE3A25922193C72A005D0F7F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CE3A25922193C72A005D0F7F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE3A25912193C72A005D0F7F /* TecentSportTransition.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE3A25932193C72A005D0F7F /* TecentSportTransition */ = {
+			isa = PBXGroup;
+			children = (
+				CE3A25AA2193C741005D0F7F /* Classes */,
+				CE3A25942193C72A005D0F7F /* AppDelegate.h */,
+				CE3A25952193C72A005D0F7F /* AppDelegate.m */,
+				CE3A259D2193C737005D0F7F /* Assets.xcassets */,
+				CE3A25C02193D4B7005D0F7F /* Main.storyboard */,
+				CE3A259F2193C737005D0F7F /* LaunchScreen.storyboard */,
+				CE3A25A22193C737005D0F7F /* Info.plist */,
+				CE3A25A32193C737005D0F7F /* main.m */,
+				CE3A25AB2193C8DF005D0F7F /* TabbarController.h */,
+				CE3A25AC2193C8DF005D0F7F /* TabbarController.m */,
+				CE3A25AE2193C9F1005D0F7F /* FirstNavigationController.h */,
+				CE3A25AF2193C9F1005D0F7F /* FirstNavigationController.m */,
+				CE3A25B12193CA0E005D0F7F /* SecondNavigationController.h */,
+				CE3A25B22193CA0E005D0F7F /* SecondNavigationController.m */,
+				CE3A25B42193CA45005D0F7F /* TestAViewController.h */,
+				CE3A25B52193CA45005D0F7F /* TestAViewController.m */,
+				CE3A25BA2193CE90005D0F7F /* TestBViewController.h */,
+				CE3A25BB2193CE90005D0F7F /* TestBViewController.m */,
+				CE3A25BD2193CFBF005D0F7F /* UIViewController+Utils.h */,
+				CE3A25BE2193CFBF005D0F7F /* UIViewController+Utils.m */,
+			);
+			path = TecentSportTransition;
+			sourceTree = "<group>";
+		};
+		CE3A25AA2193C741005D0F7F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CE3A25C22193D8D7005D0F7F /* TSTAnimator.h */,
+				CE3A25C32193D8D7005D0F7F /* TSTAnimator.m */,
+				CE3A25C52193DC18005D0F7F /* TSTTransition.h */,
+				CE3A25C62193DC18005D0F7F /* TSTTransition.m */,
+				CE3A25C82193E732005D0F7F /* TSTInteractiveTransition.h */,
+				CE3A25C92193E732005D0F7F /* TSTInteractiveTransition.m */,
+				CE3A25CE2193EAEE005D0F7F /* UIViewController+TSTTransition.h */,
+				CE3A25CF2193EAEE005D0F7F /* UIViewController+TSTTransition.m */,
+				CE3A25D12194219E005D0F7F /* TSTTransitionGlobalSetting.h */,
+				CE3A25D22194219E005D0F7F /* TSTTransitionGlobalSetting.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE3A25902193C72A005D0F7F /* TecentSportTransition */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE3A25A72193C737005D0F7F /* Build configuration list for PBXNativeTarget "TecentSportTransition" */;
+			buildPhases = (
+				CE3A258D2193C72A005D0F7F /* Sources */,
+				CE3A258E2193C72A005D0F7F /* Frameworks */,
+				CE3A258F2193C72A005D0F7F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TecentSportTransition;
+			productName = TecentSportTransition;
+			productReference = CE3A25912193C72A005D0F7F /* TecentSportTransition.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE3A25892193C729005D0F7F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = jianghongbing;
+				TargetAttributes = {
+					CE3A25902193C72A005D0F7F = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = CE3A258C2193C729005D0F7F /* Build configuration list for PBXProject "TecentSportTransition" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CE3A25882193C729005D0F7F;
+			productRefGroup = CE3A25922193C72A005D0F7F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE3A25902193C72A005D0F7F /* TecentSportTransition */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE3A258F2193C72A005D0F7F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE3A25C12193D4B7005D0F7F /* Main.storyboard in Resources */,
+				CE3A25A12193C737005D0F7F /* LaunchScreen.storyboard in Resources */,
+				CE3A259E2193C737005D0F7F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE3A258D2193C72A005D0F7F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE3A25CA2193E732005D0F7F /* TSTInteractiveTransition.m in Sources */,
+				CE3A25D32194219E005D0F7F /* TSTTransitionGlobalSetting.m in Sources */,
+				CE3A25C72193DC18005D0F7F /* TSTTransition.m in Sources */,
+				CE3A25B62193CA45005D0F7F /* TestAViewController.m in Sources */,
+				CE3A25A42193C737005D0F7F /* main.m in Sources */,
+				CE3A25962193C72A005D0F7F /* AppDelegate.m in Sources */,
+				CE3A25B32193CA0E005D0F7F /* SecondNavigationController.m in Sources */,
+				CE3A25BF2193CFBF005D0F7F /* UIViewController+Utils.m in Sources */,
+				CE3A25C42193D8D7005D0F7F /* TSTAnimator.m in Sources */,
+				CE3A25B02193C9F1005D0F7F /* FirstNavigationController.m in Sources */,
+				CE3A25BC2193CE90005D0F7F /* TestBViewController.m in Sources */,
+				CE3A25D02193EAEE005D0F7F /* UIViewController+TSTTransition.m in Sources */,
+				CE3A25AD2193C8DF005D0F7F /* TabbarController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CE3A259F2193C737005D0F7F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE3A25A02193C737005D0F7F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE3A25A52193C737005D0F7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CE3A25A62193C737005D0F7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE3A25A82193C737005D0F7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = WSQMLX487W;
+				INFOPLIST_FILE = TecentSportTransition/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jianghongbing.TecentSportTransition;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = ios_development;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE3A25A92193C737005D0F7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = WSQMLX487W;
+				INFOPLIST_FILE = TecentSportTransition/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jianghongbing.TecentSportTransition;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = ios_adhoc;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE3A258C2193C729005D0F7F /* Build configuration list for PBXProject "TecentSportTransition" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE3A25A52193C737005D0F7F /* Debug */,
+				CE3A25A62193C737005D0F7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE3A25A72193C737005D0F7F /* Build configuration list for PBXNativeTarget "TecentSportTransition" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE3A25A82193C737005D0F7F /* Debug */,
+				CE3A25A92193C737005D0F7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CE3A25892193C729005D0F7F /* Project object */;
+}
