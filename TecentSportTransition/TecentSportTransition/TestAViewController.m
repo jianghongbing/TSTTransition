@@ -43,8 +43,9 @@
     viewController.hidesBottomBarWhenPushed = YES;
     if ([self.navigationController isKindOfClass:[FirstNavigationController class]]) {
         viewController.useTSTTransition = YES;
-        [self tst_presentViewController:viewController animated:YES completion:nil];
-        
+        [self tst_presentViewController:viewController animated:YES completion:^{
+            NSLog(@"present a view controller");
+        }];
     }else {
         viewController.useTSTTransition = NO;
         [self.navigationController pushViewController:viewController animated:YES];

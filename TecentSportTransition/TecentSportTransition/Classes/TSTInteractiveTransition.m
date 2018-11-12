@@ -7,52 +7,42 @@
 //
 
 #import "TSTInteractiveTransition.h"
-@interface TSTInteractiveTransition()
-@property (nonatomic, weak) UINavigationController *navigationController;
+@interface TSTInteractiveTransition()<UIGestureRecognizerDelegate>
 @property (nonatomic, weak) UIViewController *viewController;
 @property (nonatomic, weak) id<UIViewControllerContextTransitioning> transitionContext;
 @property (nonatomic, strong) UIPanGestureRecognizer *panGestureRecognizer;
 @property (nonatomic) CGFloat triggerPercent;
 @property (nonatomic, getter=isEnabledInteractiveDismissTransition) BOOL enabledInteractiveDismissTransition;
+@property (nonatomic, copy) TSTInteractiveDismissTransitionCompletion completion;
 @end
 @implementation TSTInteractiveTransition
 #pragma mark initializer
-- (instancetype)initWithNavigationController:(UINavigationController *)navigationController {
-    self = [super init];
-    if (self) {
-        _navigationController = navigationController;
-        [self addGestureRecognizers];
-    }
-    return self;
-}
-
 - (instancetype)initWithViewController:(UIViewController *)viewController
                         triggerPercent:(CGFloat)triggerPercent
-   enabledInteractiveDismissTransition:(BOOL)enabledInteractiveDismissTransition {
+   enabledInteractiveDismissTransition:(BOOL)enabledInteractiveDismissTransition
+                            completion:(TSTInteractiveDismissTransitionCompletion)completion{
     self = [super init];
     if (self) {
         _viewController = viewController;
         _triggerPercent = triggerPercent;
         _enabledInteractiveDismissTransition = enabledInteractiveDismissTransition;
+        _completion = [completion copy];
+        [self addGestureRecognizers];
     }
     return self;
 }
 
-
-
 - (UIView *)gestureRecognizersView {
-    UIView *systemInteractivePopGestureRecognizerView = self.navigationController.interactivePopGestureRecognizer.view;
-    UIView *view = systemInteractivePopGestureRecognizerView ?: self.navigationController.view;
-    return view;
+    return self.viewController.view;
 }
 
-
 - (void)addGestureRecognizers {
+    if(!self.enabledInteractiveDismissTransition) return;
     UIView *view = [self gestureRecognizersView];
     if (view == nil) return;
     self.panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGestureRecognizerEvent:)];
+    self.panGestureRecognizer.delegate = self;
     [view addGestureRecognizer:self.panGestureRecognizer];
-    [self.panGestureRecognizer requireGestureRecognizerToFail:self.navigationController.interactivePopGestureRecognizer];
 }
 
 - (void)removeGestureRecognizers {
@@ -64,16 +54,14 @@
 
 - (void)dealloc {
     [self removeGestureRecognizers];
-    self.navigationController = nil;
 }
-
 
 - (void)handlePanGestureRecognizerEvent:(UIPanGestureRecognizer *)panGestureRecognizer {
     UIGestureRecognizerState state = panGestureRecognizer.state;
     switch (state) {
         case UIGestureRecognizerStateBegan:
         {
-            [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+            [self.viewController dismissViewControllerAnimated:YES completion:nil];
         }
             break;
         case UIGestureRecognizerStateChanged:
@@ -82,7 +70,7 @@
         case UIGestureRecognizerStateEnded:
         {
             CGFloat percent = [self transitionPercentForGestureRecognizer:panGestureRecognizer];
-            percent > 0.5 ? [self finishInteractiveTransition] : [self cancelInteractiveTransition];
+            percent >= self.triggerPercent ? [self finishInteractiveTransition] : [self cancelInteractiveTransition];
         }
             break;
         default:
@@ -93,18 +81,17 @@
 
 
 - (CGFloat)transitionPercentForGestureRecognizer:(UIPanGestureRecognizer *)panGestureRecognizer{
-//    UIGestureRecognizerState state = panGestureRecognizer.state;
+    UIGestureRecognizerState state = panGestureRecognizer.state;
     UIView *containerView = self.transitionContext.containerView;
     CGFloat width = CGRectGetWidth(containerView.bounds);
-    CGFloat xTranslation = [panGestureRecognizer translationInView:containerView].x;
-    CGFloat percent = MAX(xTranslation / width, 0);
-//    CGFloat velocity = [panGestureRecognizer velocityInView:containerView].x;
-//    if (state == UIGestureRecognizerStateEnded && velocity > 100) {
-//        percent = 1;
-//    }else {
-//        CGFloat xTranslation = [panGestureRecognizer translationInView:containerView].x;
-//        percent = MAX(xTranslation / width, 0);
-//    }
+    CGFloat percent = 0.0;
+    CGFloat velocity = [panGestureRecognizer velocityInView:containerView].x;
+    if (state == UIGestureRecognizerStateEnded && velocity > 100) {
+        percent = 1;
+    }else {
+        CGFloat xTranslation = [panGestureRecognizer translationInView:containerView].x;
+        percent = MAX(xTranslation / width, 0);
+    }
     return percent;
 }
 
@@ -116,14 +103,35 @@
 }
 
 - (void)finishInteractiveTransition {
+    if (self.completion) {
+        self.completion(YES);
+    }
     [super finishInteractiveTransition];
-//    self.popViewControllerByPanGestureRecognizer = NO;
 }
 
 
 - (void)cancelInteractiveTransition {
+    if(self.completion) {
+        self.completion(NO);
+    }
     [super cancelInteractiveTransition];
-//    self.popViewControllerByPanGestureRecognizer = NO;
 }
+
+
+#pragma mark UIGestureRecognizerDelegate
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
+    UINavigationController *navigationController;
+    if ([self.viewController isKindOfClass:[UINavigationController class]]) {
+        navigationController = (UINavigationController *)self.viewController;
+    }else if (self.viewController.navigationController) {
+        navigationController = self.viewController.navigationController;
+    }
+    if (navigationController && navigationController.viewControllers.count > 1) return NO;
+    return YES;
+}
+
+//- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRequireFailureOfGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+//    return YES;
+//}
 
 @end

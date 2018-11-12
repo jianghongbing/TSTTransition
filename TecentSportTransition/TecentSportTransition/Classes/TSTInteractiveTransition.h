@@ -7,13 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TSTTransition.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TSTInteractiveTransition : UIPercentDrivenInteractiveTransition
-- (instancetype)initWithNavigationController:(nonnull UINavigationController *)navigationController;
 - (instancetype)initWithViewController:(nonnull UIViewController *)viewController
                         triggerPercent:(CGFloat)triggerPercent
-   enabledInteractiveDismissTransition:(BOOL)enabledInteractiveDismissTransition;
+   enabledInteractiveDismissTransition:(BOOL)enabledInteractiveDismissTransition
+                            completion:(__nullable
+                                        TSTInteractiveDismissTransitionCompletion)completion;
 @end
 
 NS_ASSUME_NONNULL_END

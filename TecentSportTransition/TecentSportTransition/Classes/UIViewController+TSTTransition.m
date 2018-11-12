@@ -30,8 +30,12 @@
      embedInANavigationController:(BOOL)embedInANavigationController
                          animated:(BOOL)animated
                        completion:(void (^)(void))completion {
+    BOOL embedIn = embedInANavigationController;
+    if ([viewController isKindOfClass:[UINavigationController class]] || viewController.navigationController) {
+        embedIn = NO;
+    }
     
-    if (embedInANavigationController) {
+    if (embedIn) {
         UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
         navigationController.transitioningDelegate = self.tst_transition;
         [self presentViewController:navigationController animated:animated completion:completion];

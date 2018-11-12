@@ -32,9 +32,10 @@ NS_ASSUME_NONNULL_BEGIN
  @param animated animated or not
  @param completion present complete handler
  */
-- (void)tst_presentViewController:(UIViewController *)viewController
+- (void)tst_presentViewController:(nonnull UIViewController *)viewController
      embedInANavigationController:(BOOL)embedInANavigationController
-                         animated:(BOOL)animated completion:(void (^ __nullable)(void))completion;
+                         animated:(BOOL)animated
+                       completion:(void (^ __nullable)(void))completion;
 
 
 /**

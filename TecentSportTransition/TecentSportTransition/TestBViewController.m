@@ -22,6 +22,7 @@
     [self randomBackgroundColor];
     self.navigationItem.title = @"B";
     [self addButtons];
+    NSLog(@"tabbarController:%@, navigationController:%@, parentControlelr:%@", self.tabBarController, self.navigationController, self.parentViewController);
 }
 
 - (void)addButtons {
@@ -49,7 +50,9 @@
     TestBViewController *viewController = [TestBViewController new];
     viewController.useTSTTransition = self.useTSTTransition;
     if (self.useTSTTransition) {
-        [self tst_presentViewController:viewController animated:YES completion:nil];
+        [self tst_presentViewController:viewController animated:YES completion:^{
+            NSLog(@"present a view controller");
+        }];
     }else {
         [self.navigationController pushViewController:viewController animated:YES];
     }
@@ -57,7 +60,9 @@
 
 - (void)dismiss:(UIButton *)button {
     if (self.useTSTTransition) {
-        [self tst_dismissViewControllerAnimated:YES completion:nil];
+        [self tst_dismissViewControllerAnimated:YES completion:^{
+            NSLog(@"dismiss a view controller");
+        }];
     }else {
         [self.navigationController popViewControllerAnimated:YES];
     }

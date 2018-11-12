@@ -10,27 +10,30 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TSTTransitionGlobalSetting : NSObject
-
 + (instancetype)golbalSetting;
 
-//an instance of TSTTAnimator as TSTTTransition animator. default is YES.if NO and you don't provide custom presentAnimator & custom dismiss Animator, will use system default presntation & dismiss Animator
-@property (nonatomic) BOOL useTSTTAnimatorAsDefault;
-
-//custom your own animator as TSTTTranstion presentation amimator,default is nil and use TSTTAnimator
+//custom golbal present animator as TSTTTranstion presentation amimator,default is nil and use TSTTAnimator
 @property (nullable, nonatomic, strong) id<UIViewControllerAnimatedTransitioning> presentAnimator;
 
-//custom your own animator as TSTTTransition dismiss animator, default is nil and use TSTTAnimator
+//custom golbal dimiss animator as TSTTTransition dismiss animator, default is nil and use TSTTAnimator
 @property (nullable, nonatomic, strong) id<UIViewControllerAnimatedTransitioning>dismissAnimator;
 
-//properties as below are effect for TSTTAnimator only.
+//custom your own present interactive transition,default is nil.
+@property (nullable, nonatomic, strong) id<UIViewControllerInteractiveTransitioning> presentInteractiveTransition;
 
-//whether dismiss view controler by full screen gesture recognizer, defaut is YES, it is effect for TSTTAnimator.
-@property (nonatomic) BOOL enabledFullScreenInteractiveTransition;
+//custom golbal interactive transition,default is nil, if nil, an instance of TSTInteractiveTransition instead.
+@property (nullable, nonatomic, strong) id<UIViewControllerInteractiveTransitioning> dismissInteractiveTransition;
 
-//whether dismiss view controler by screen edge gesture recognizer, defaut is YES, it is effect for TSTTAnimator.
-@property (nonatomic) BOOL enabledScreenEdgeInteractiveTransition;
+//use an instance of TSTTAnimator as TSTTTransition animator. default is YES.if NO and you don't provide custom present animator & custom dismiss animator, will use system default presntation & dismiss animator
+@property (nonatomic, getter=isUseTSTTAnimatorAsDefault) BOOL useTSTTAnimatorAsDefault;
 
-//The value of this property is in the range 0.0 to 1.0,trigger for dismiss view controller. default is 0.3. it is effect for TSTTAnimator.
+//transion animation duration, default is 0.25
+@property (nonatomic) NSTimeInterval duration;
+
+//enable interactive dismiss transition or not,default is YES
+@property (nonatomic) BOOL enabledInteractiveDismissTransition;
+
+//The value of this property is in the range 0.0 to 1.0,trigger for dismiss view controller. default is 0.3.
 @property (nonatomic) float triggerPercent;
 @end
 

@@ -27,12 +27,9 @@
 
 - (void)commonInit {
     _useTSTTAnimatorAsDefault = YES;
-    _enabledFullScreenInteractiveTransition = YES;
-    _enabledScreenEdgeInteractiveTransition = YES;
+    _duration = 0.25;
+    _enabledInteractiveDismissTransition = YES;
     _triggerPercent = 0.3;
-//    _shadowWidth = 3.0;
-//    _shadowColor = [UIColor lightGrayColor];
-//    _initialShadowOpcity = 0.8;
 }
 
 

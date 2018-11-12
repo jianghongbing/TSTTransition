@@ -7,7 +7,6 @@
 //
 
 #import "TSTAnimator.h"
-#import "TSTTransitionGlobalSetting.h"
 @interface TSTAnimator()
 @property (nonatomic) NSTimeInterval duration;
 @end
@@ -83,7 +82,6 @@
         [transitionContext completeTransition:!transitionWasCancelled];
     }];
 }
-
 //- (UIView *)addShadowTo:(UIView *)view {
 //    CGFloat shadowWidth = [TSTTransitionGlobalSetting golbalSetting].shadowWidth;
 //    UIColor *shadowColor = [TSTTransitionGlobalSetting golbalSetting].shadowColor;
@@ -95,6 +93,4 @@
 //    [view addSubview:shadowView];
 //    return shadowView;
 //}
-
-
 @end
