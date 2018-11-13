@@ -24,8 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
 //custom golbal interactive transition,default is nil, if nil, an instance of TSTInteractiveTransition instead.
 @property (nullable, nonatomic, strong) id<UIViewControllerInteractiveTransitioning> dismissInteractiveTransition;
 
-//use an instance of TSTTAnimator as TSTTTransition animator. default is YES.if NO and you don't provide custom present animator & custom dismiss animator, will use system default presntation & dismiss animator
-@property (nonatomic, getter=isUseTSTTAnimatorAsDefault) BOOL useTSTTAnimatorAsDefault;
+//use an instance of TSTAnimator as TSTTransition animator. default is YES.if NO and you don't provide custom present animator & custom dismiss animator, will use system default presntation & dismiss animator
+@property (nonatomic, getter=isUsedTSTAnimatorAsDefault) BOOL usedTSTAnimatorAsDefault;
 
 //transion animation duration, default is 0.25
 @property (nonatomic) NSTimeInterval duration;

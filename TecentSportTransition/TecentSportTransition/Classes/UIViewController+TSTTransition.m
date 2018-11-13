@@ -18,6 +18,16 @@
     return transition;
 }
 
+- (TSTDismissInteractiveTransition *)tst_dismissInteractiveTransition {
+    TSTDismissInteractiveTransition *dismissInteractiveTransition = objc_getAssociatedObject(self, _cmd) ?: objc_getAssociatedObject(self.navigationController, _cmd);
+    NSLog(@"dismiss:%@", dismissInteractiveTransition);
+    return objc_getAssociatedObject(self, _cmd) ?: objc_getAssociatedObject(self.navigationController, _cmd);
+}
+
+- (void)setTst_dismissInteractiveTransition:(TSTDismissInteractiveTransition *)dismissInteractiveTransition {
+    objc_setAssociatedObject(self, @selector(tst_dismissInteractiveTransition), dismissInteractiveTransition, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
 
 - (void)tst_presentViewController:(UIViewController *)viewController
                          animated:(BOOL)animated
@@ -30,19 +40,18 @@
      embedInANavigationController:(BOOL)embedInANavigationController
                          animated:(BOOL)animated
                        completion:(void (^)(void))completion {
-    BOOL embedIn = embedInANavigationController;
-    if ([viewController isKindOfClass:[UINavigationController class]] || viewController.navigationController) {
-        embedIn = NO;
+    UIViewController *presented = viewController;
+    if (viewController.navigationController) {
+        presented = viewController.navigationController;
     }
     
-    if (embedIn) {
-        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
-        navigationController.transitioningDelegate = self.tst_transition;
-        [self presentViewController:navigationController animated:animated completion:completion];
-    }else {
-        viewController.transitioningDelegate = self.tst_transition;
-        [self presentViewController:viewController animated:animated completion:completion];
+    if (![presented isKindOfClass:[UINavigationController class]]) {
+        if (embedInANavigationController) {
+            presented = [[UINavigationController alloc] initWithRootViewController:presented];
+        }
     }
+    presented.transitioningDelegate = self.tst_transition;
+    [self presentViewController:presented animated:animated completion:completion];
 }
 
 - (void)tst_dismissViewControllerAnimated:(BOOL)animated

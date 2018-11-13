@@ -26,7 +26,7 @@
 }
 
 - (void)commonInit {
-    _useTSTTAnimatorAsDefault = YES;
+    _usedTSTAnimatorAsDefault = YES;
     _duration = 0.25;
     _enabledInteractiveDismissTransition = YES;
     _triggerPercent = 0.3;

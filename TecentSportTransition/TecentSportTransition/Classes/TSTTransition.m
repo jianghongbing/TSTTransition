@@ -8,11 +8,10 @@
 
 #import "TSTTransition.h"
 #import "TSTAnimator.h"
-#import "TSTInteractiveTransition.h"
+#import "TSTDismissInteractiveTransition.h"
 #import "TSTTransitionGlobalSetting.h"
 @interface TSTTransition()
-@property (nonatomic, strong) TSTInteractiveTransition *interactiveTransition;
-
+@property (nonatomic, strong) TSTDismissInteractiveTransition *interactiveTransition;
 @end
 @implementation TSTTransition
 #pragma mark initiazlier
@@ -25,7 +24,7 @@
 }
 
 - (void)commonInit {
-    _useTSTTAnimatorAsDefault = YES;
+    _usedTSTAnimatorAsDefault = YES;
     _duration = 0.25;
     _enabledInteractiveDismissTransition = YES;
     _triggerPercent = 0.3;
@@ -35,7 +34,6 @@
     self.presentAnimator = nil;
     self.dismissAnimator = nil;
     self.interactiveTransition = nil;
-    self.completion = nil;
 }
 
 #pragma mark getter
@@ -72,13 +70,13 @@
 #pragma mark UIViewControllerTransitioningDelegate
 - (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
     if (self.enabledInteractiveDismissTransition) {
-        self.interactiveTransition = [[TSTInteractiveTransition alloc] initWithViewController:presented triggerPercent:self.triggerPercent enabledInteractiveDismissTransition:self.enabledInteractiveDismissTransition completion:self.completion];
+        self.interactiveTransition = [[TSTDismissInteractiveTransition alloc] initWithViewController:presented triggerPercent:self.triggerPercent enabledInteractiveDismissTransition:self.enabledInteractiveDismissTransition];
     }
-    return self.presentAnimator ?: self.useTSTTAnimatorAsDefault ? [[TSTAnimator alloc] initWithDuration:self.duration] : nil;
+    return self.presentAnimator ?: self.isUsedTSTAnimatorAsDefault ? [[TSTAnimator alloc] initWithDuration:self.duration] : nil;
 }
 
 - (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
-    return self.dismissAnimator ?: self.useTSTTAnimatorAsDefault ? [[TSTAnimator alloc] initWithDuration:self.duration] : nil;
+    return self.dismissAnimator ?: self.isUsedTSTAnimatorAsDefault ? [[TSTAnimator alloc] initWithDuration:self.duration] : nil;
 }
 
 
@@ -91,5 +89,4 @@
     if (![animator isMemberOfClass:[TSTAnimator class]]) return nil;
     return self.interactiveTransition;
 }
-
 @end

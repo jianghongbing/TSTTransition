@@ -8,9 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "TSTTransition.h"
+#import "TSTDismissInteractiveTransition.h"
 NS_ASSUME_NONNULL_BEGIN
 @interface UIViewController (TSTTransition)
-@property (nonatomic, strong, readonly) TSTTransition *tst_transition;
+
+//this property add to presenting view controller
+@property (nullable, nonatomic, strong, readonly) TSTTransition *tst_transition;
+//this propety add to presnted view controller
+@property (nullable, nonatomic, strong, readonly) TSTDismissInteractiveTransition *tst_dismissInteractiveTransition;
 
 /**
  present a view controller
@@ -47,5 +52,4 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)tst_dismissViewControllerAnimated:(BOOL)animated
                                completion:(void(^ __nullable)(void))completion;
 @end
-
 NS_ASSUME_NONNULL_END

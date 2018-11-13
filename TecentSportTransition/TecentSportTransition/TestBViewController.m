@@ -11,7 +11,7 @@
 #import "UIViewController+TSTTransition.h"
 #import "FirstNavigationController.h"
 #import "SecondNavigationController.h"
-@interface TestBViewController ()
+@interface TestBViewController ()<TSTInteractiveDismissTransitionDelegate>
 
 @end
 
@@ -23,6 +23,9 @@
     self.navigationItem.title = @"B";
     [self addButtons];
     NSLog(@"tabbarController:%@, navigationController:%@, parentControlelr:%@", self.tabBarController, self.navigationController, self.parentViewController);
+    NSLog(@"transition:%@, interactiveDismissTransition:%@", self.tst_transition, self.tst_dismissInteractiveTransition);
+    
+    self.tst_dismissInteractiveTransition.delegate = self;
 }
 
 - (void)addButtons {
@@ -68,6 +71,16 @@
     }
 }
 
+- (void)dealloc {
+    NSLog(@"test b dealloc");
+}
 
+#pragma mark TSTInteractiveDismissTransitionDelegate
+- (void)interactiveDismissTransition:(TSTDismissInteractiveTransition *)interactiveDismissTransition didFinish:(BOOL)finished {
+    NSLog(@"finished:%d", finished);
+}
 
+- (void)interactiveDismissTransition:(TSTDismissInteractiveTransition *)interactiveDismissTransition updateAnimationProgress:(float)animationProgress {
+    NSLog(@"progress:%f", animationProgress);
+}
 @end

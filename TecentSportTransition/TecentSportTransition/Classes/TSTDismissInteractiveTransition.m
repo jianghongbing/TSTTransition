@@ -1,32 +1,31 @@
 //
-//  TSTInteractiveTransition.m
+//  TSTDismissInteractiveTransition.m
 //  TecentSportTransition
 //
 //  Created by pantosoft on 2018/11/8.
 //  Copyright © 2018年 jianghongbing. All rights reserved.
 //
 
-#import "TSTInteractiveTransition.h"
-@interface TSTInteractiveTransition()<UIGestureRecognizerDelegate>
+#import "TSTDismissInteractiveTransition.h"
+#import "UIViewController+TSTTransitionPrivate.h"
+@interface TSTDismissInteractiveTransition()<UIGestureRecognizerDelegate>
 @property (nonatomic, weak) UIViewController *viewController;
 @property (nonatomic, weak) id<UIViewControllerContextTransitioning> transitionContext;
 @property (nonatomic, strong) UIPanGestureRecognizer *panGestureRecognizer;
 @property (nonatomic) CGFloat triggerPercent;
 @property (nonatomic, getter=isEnabledInteractiveDismissTransition) BOOL enabledInteractiveDismissTransition;
-@property (nonatomic, copy) TSTInteractiveDismissTransitionCompletion completion;
 @end
-@implementation TSTInteractiveTransition
+@implementation TSTDismissInteractiveTransition
 #pragma mark initializer
 - (instancetype)initWithViewController:(UIViewController *)viewController
                         triggerPercent:(CGFloat)triggerPercent
-   enabledInteractiveDismissTransition:(BOOL)enabledInteractiveDismissTransition
-                            completion:(TSTInteractiveDismissTransitionCompletion)completion{
+   enabledInteractiveDismissTransition:(BOOL)enabledInteractiveDismissTransition {
     self = [super init];
     if (self) {
         _viewController = viewController;
+        _viewController.tst_dismissInteractiveTransition = self;
         _triggerPercent = triggerPercent;
         _enabledInteractiveDismissTransition = enabledInteractiveDismissTransition;
-        _completion = [completion copy];
         [self addGestureRecognizers];
     }
     return self;
@@ -92,6 +91,9 @@
         CGFloat xTranslation = [panGestureRecognizer translationInView:containerView].x;
         percent = MAX(xTranslation / width, 0);
     }
+    if (self.delegate && [self.delegate respondsToSelector:@selector(interactiveDismissTransition:updateAnimationProgress:)]) {
+        [self.delegate interactiveDismissTransition:self updateAnimationProgress:percent];
+    }
     return percent;
 }
 
@@ -103,18 +105,24 @@
 }
 
 - (void)finishInteractiveTransition {
-    if (self.completion) {
-        self.completion(YES);
-    }
+    [self updateTransitionFinishStateToDelegate:YES];
     [super finishInteractiveTransition];
 }
 
 
 - (void)cancelInteractiveTransition {
-    if(self.completion) {
-        self.completion(NO);
-    }
+    [self updateTransitionFinishStateToDelegate:NO];
     [super cancelInteractiveTransition];
+}
+
+- (void)updateTransitionFinishStateToDelegate:(BOOL)finished {
+    if (self.completion) {
+        self.completion((finished));
+    }
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(interactiveDismissTransition:didFinish:)]) {
+        [self.delegate interactiveDismissTransition:self didFinish:finished];
+    }
 }
 
 

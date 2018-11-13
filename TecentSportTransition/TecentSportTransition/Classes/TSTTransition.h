@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void(^TSTInteractiveDismissTransitionCompletion)(BOOL finish);
 
 @interface TSTTransition : NSObject <UIViewControllerTransitioningDelegate>
 //custom your own animator as TSTTTranstion presentation amimator,default is nil and use TSTTAnimator
@@ -23,10 +22,12 @@ typedef void(^TSTInteractiveDismissTransitionCompletion)(BOOL finish);
 
 //custom your own dismiss interactive transition,default is nil, if nil, an instance of TSTInteractiveTransition instead.
 @property (nullable, nonatomic, strong) id<UIViewControllerInteractiveTransitioning> dismissInteractiveTransition;
-//properties as below are effect for TSTTAnimator and TSTTInteractiveTransition.
 
-//use an instance of TSTTAnimator as TSTTTransition animator. default is YES.if NO and you don't provide custom present animator & custom dismiss animator, will use system default presntation & dismiss animator
-@property (nonatomic, getter=isUseTSTTAnimatorAsDefault) BOOL useTSTTAnimatorAsDefault;
+//properties as below are effect for TSTAnimator and TSTInteractiveTransition.
+
+//@property (nonatomic, weak) id<> delegate;
+//use an instance of TSTAnimator as TSTTransition animator. default is YES.if NO and you don't provide custom present animator & custom dismiss animator, will use system default presntation & dismiss animator
+@property (nonatomic, getter=isUsedTSTAnimatorAsDefault) BOOL usedTSTAnimatorAsDefault;
 
 //transion animation duration, default is 0.25
 @property (nonatomic) NSTimeInterval duration;
@@ -35,7 +36,7 @@ typedef void(^TSTInteractiveDismissTransitionCompletion)(BOOL finish);
 @property (nonatomic) BOOL enabledInteractiveDismissTransition;
 
 //interactive dismiss transition completion handler
-@property (nullable, nonatomic, copy) TSTInteractiveDismissTransitionCompletion completion;
+//@property (nullable, nonatomic, copy) TSTInteractiveDismissTransitionCompletion completion;
 
 //The value of this property is in the range 0.0 to 1.0,trigger for dismiss view controller. default is 0.3.
 @property (nonatomic) float triggerPercent;
