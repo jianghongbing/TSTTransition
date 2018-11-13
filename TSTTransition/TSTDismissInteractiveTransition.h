@@ -12,9 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 typedef void(^TSTDismissInteractiveTransitionCompletion)(BOOL finished);
 @protocol TSTInteractiveDismissTransitionDelegate <NSObject>
 @optional
-- (void)interactiveDismissTransition:(TSTDismissInteractiveTransition *)interactiveDismissTransition didFinish:(BOOL)finished;
+- (void)dismissInteractiveTransition:(TSTDismissInteractiveTransition *)dismissInteractiveTransition didFinish:(BOOL)finished;
 
-- (void)interactiveDismissTransition:(TSTDismissInteractiveTransition *)interactiveDismissTransition updateAnimationProgress:(float)animationProgress;
+- (void)dismissInteractiveTransition:(TSTDismissInteractiveTransition *)dismissInteractiveTransition updateAnimationProgress:(float)animationProgress;
 
 
 @end

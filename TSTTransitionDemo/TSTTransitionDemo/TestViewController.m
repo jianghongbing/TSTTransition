@@ -1,32 +1,38 @@
 //
-//  TestBViewController.m
-//  TecentSportTransition
+//  TestViewController.m
+//  TSTTransitionDemo
 //
-//  Created by pantosoft on 2018/11/8.
-//  Copyright © 2018年 jianghongbing. All rights reserved.
+//  Created by pantosoft on 2018/11/13.
+//  Copyright © 2018 jianghongbing. All rights reserved.
 //
 
-#import "TestBViewController.h"
+#import "TestViewController.h"
 #import "UIViewController+Utils.h"
 #import "UIViewController+TSTTransition.h"
-#import "FirstNavigationController.h"
-#import "SecondNavigationController.h"
-@interface TestBViewController ()<TSTInteractiveDismissTransitionDelegate>
+@interface TestViewController ()<TSTInteractiveDismissTransitionDelegate>
 
 @end
 
-@implementation TestBViewController
+@implementation TestViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self randomBackgroundColor];
-    self.navigationItem.title = @"B";
+    self.navigationItem.title = [self randomTitle];
     [self addButtons];
     NSLog(@"tabbarController:%@, navigationController:%@, parentControlelr:%@", self.tabBarController, self.navigationController, self.parentViewController);
     NSLog(@"transition:%@, interactiveDismissTransition:%@", self.tst_transition, self.tst_dismissInteractiveTransition);
     
     self.tst_dismissInteractiveTransition.delegate = self;
 }
+
+- (NSString *)randomTitle {
+    NSArray *titles = @[@"A", @"B", @"C", @"D", @"E"];
+    NSInteger randomIndex = arc4random_uniform(100) % titles.count;
+    return titles[randomIndex];
+}
+
+
 
 - (void)addButtons {
     UIButton *pushButton = [self createAButtonWithTitle:@"Push" selector:@selector(pushViewController:)];
@@ -49,29 +55,16 @@
 
 
 - (void)pushViewController:(UIButton *)button {
-    TestBViewController *viewController = [TestBViewController new];
-    viewController.useTSTTransition = self.useTSTTransition;
-    if (self.useTSTTransition) {
-        [self tst_presentViewController:viewController animated:YES completion:^{
-            NSLog(@"present a view controller");
-        }];
-    }else {
-        [self.navigationController pushViewController:viewController animated:YES];
-    }
+    TestViewController *viewController = [TestViewController new];
+    [self tst_presentViewController:viewController animated:YES completion:^{
+        NSLog(@"present a view controller");
+    }];
 }
 
 - (void)dismiss:(UIButton *)button {
-    if (self.useTSTTransition) {
-        [self tst_dismissViewControllerAnimated:YES completion:^{
-            NSLog(@"dismiss a view controller");
-        }];
-    }else {
-        [self.navigationController popViewControllerAnimated:YES];
-    }
-}
-
-- (void)dealloc {
-    NSLog(@"test b dealloc");
+    [self tst_dismissViewControllerAnimated:YES completion:^{
+        NSLog(@"dismiss a view controller");
+    }];
 }
 
 #pragma mark TSTInteractiveDismissTransitionDelegate
@@ -82,4 +75,5 @@
 - (void)dismissInteractiveTransition:(TSTDismissInteractiveTransition *)dismissInteractiveTransition updateAnimationProgress:(float)animationProgress {
     NSLog(@"progress:%f", animationProgress);
 }
+
 @end

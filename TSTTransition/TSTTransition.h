@@ -23,10 +23,10 @@ NS_ASSUME_NONNULL_BEGIN
 //custom your own dismiss interactive transition,default is nil, if nil, an instance of TSTInteractiveTransition instead.
 @property (nullable, nonatomic, strong) id<UIViewControllerInteractiveTransitioning> dismissInteractiveTransition;
 
-//properties as below are effect for TSTAnimator and TSTInteractiveTransition.
+//properties as below are effect for TSTAnimator and TSTDismissInteractiveTransition.
 
 //@property (nonatomic, weak) id<> delegate;
-//use an instance of TSTAnimator as TSTTransition animator. default is YES.if NO and you don't provide custom present animator & custom dismiss animator, will use system default presntation & dismiss animator
+//use an instance of TSTAnimator as TSTTransition animator. default is YES.if NO and you don't provide custom present animator or custom dismiss animator, will use system default presntation and dismiss animator
 @property (nonatomic, getter=isUsedTSTAnimatorAsDefault) BOOL usedTSTAnimatorAsDefault;
 
 //transion animation duration, default is 0.25

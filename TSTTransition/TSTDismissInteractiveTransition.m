@@ -91,8 +91,8 @@
         CGFloat xTranslation = [panGestureRecognizer translationInView:containerView].x;
         percent = MAX(xTranslation / width, 0);
     }
-    if (self.delegate && [self.delegate respondsToSelector:@selector(interactiveDismissTransition:updateAnimationProgress:)]) {
-        [self.delegate interactiveDismissTransition:self updateAnimationProgress:percent];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(dismissInteractiveTransition:updateAnimationProgress:)]) {
+        [self.delegate dismissInteractiveTransition:self updateAnimationProgress:percent];
     }
     return percent;
 }
@@ -120,8 +120,8 @@
         self.completion((finished));
     }
     
-    if (self.delegate && [self.delegate respondsToSelector:@selector(interactiveDismissTransition:didFinish:)]) {
-        [self.delegate interactiveDismissTransition:self didFinish:finished];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(dismissInteractiveTransition:didFinish:)]) {
+        [self.delegate dismissInteractiveTransition:self didFinish:finished];
     }
 }
 
