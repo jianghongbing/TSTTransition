@@ -40,11 +40,7 @@
      embedInANavigationController:(BOOL)embedInANavigationController
                          animated:(BOOL)animated
                        completion:(void (^)(void))completion {
-    UIViewController *presented = viewController;
-    if (viewController.navigationController) {
-        presented = viewController.navigationController;
-    }
-    
+    UIViewController *presented = viewController;    
     if (![presented isKindOfClass:[UINavigationController class]]) {
         if (embedInANavigationController) {
             presented = [[UINavigationController alloc] initWithRootViewController:presented];

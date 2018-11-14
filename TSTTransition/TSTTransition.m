@@ -36,6 +36,14 @@
     self.interactiveTransition = nil;
 }
 
+#pragma mark setter
+//- (void)setPresentAnimator:(id<UIViewControllerAnimatedTransitioning>)presentAnimator {
+//    _presentAnimator = presentAnimator;
+//    self.interactiveTransition = nil;
+//}
+
+
+
 #pragma mark getter
 - (id<UIViewControllerAnimatedTransitioning>)presentAnimator {
     if (_presentAnimator) return _presentAnimator;
@@ -69,7 +77,7 @@
 
 #pragma mark UIViewControllerTransitioningDelegate
 - (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
-    if (self.enabledInteractiveDismissTransition) {
+    if (self.enabledInteractiveDismissTransition && !self.presentAnimator && !self.dismissAnimator) {
         self.interactiveTransition = [[TSTDismissInteractiveTransition alloc] initWithViewController:presented triggerPercent:self.triggerPercent enabledInteractiveDismissTransition:self.enabledInteractiveDismissTransition];
     }
     return self.presentAnimator ?: self.isUsedTSTAnimatorAsDefault ? [[TSTAnimator alloc] initWithDuration:self.duration] : nil;

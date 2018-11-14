@@ -79,6 +79,11 @@
         if (transitionWasCancelled) {
             [toView removeFromSuperview];
         }
+        if (isPresenting) {
+            fromView.transform = CGAffineTransformIdentity;
+        }else {
+            toView.transform = CGAffineTransformIdentity;
+        }
         [transitionContext completeTransition:!transitionWasCancelled];
     }];
 }

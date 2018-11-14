@@ -128,13 +128,10 @@
 
 #pragma mark UIGestureRecognizerDelegate
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
-    UINavigationController *navigationController;
     if ([self.viewController isKindOfClass:[UINavigationController class]]) {
-        navigationController = (UINavigationController *)self.viewController;
-    }else if (self.viewController.navigationController) {
-        navigationController = self.viewController.navigationController;
+        UINavigationController *navigationController = (UINavigationController *)self.viewController;
+        if (navigationController.viewControllers.count > 1) return NO;
     }
-    if (navigationController && navigationController.viewControllers.count > 1) return NO;
     return YES;
 }
 

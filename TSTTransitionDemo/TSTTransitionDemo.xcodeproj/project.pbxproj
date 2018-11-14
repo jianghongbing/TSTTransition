@@ -24,6 +24,11 @@
 		CE70791C219AC7160080C054 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE70791B219AC7160080C054 /* TestViewController.m */; };
 		CE70791F219AC7A00080C054 /* UIViewController+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = CE70791E219AC79F0080C054 /* UIViewController+Utils.m */; };
 		CE707922219AD4AE0080C054 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE707921219AD4AE0080C054 /* TabBarController.m */; };
+		CE70792F219BF8250080C054 /* CustomPresentAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = CE70792E219BF8250080C054 /* CustomPresentAnimator.m */; };
+		CE707932219BFC7C0080C054 /* CustomDismissAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = CE707931219BFC7C0080C054 /* CustomDismissAnimator.m */; };
+		CE707935219C18110080C054 /* CustomPresentInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = CE707934219C18110080C054 /* CustomPresentInteractiveTransition.m */; };
+		CE707938219C1EA30080C054 /* TestAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE707937219C1EA30080C054 /* TestAViewController.m */; };
+		CE70793B219C217F0080C054 /* CustomPresentAnimator1.m in Sources */ = {isa = PBXBuildFile; fileRef = CE70793A219C217F0080C054 /* CustomPresentAnimator1.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +84,16 @@
 		CE70791E219AC79F0080C054 /* UIViewController+Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Utils.m"; sourceTree = "<group>"; };
 		CE707920219AD4AE0080C054 /* TabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
 		CE707921219AD4AE0080C054 /* TabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
+		CE70792D219BF8250080C054 /* CustomPresentAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomPresentAnimator.h; sourceTree = "<group>"; };
+		CE70792E219BF8250080C054 /* CustomPresentAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomPresentAnimator.m; sourceTree = "<group>"; };
+		CE707930219BFC7C0080C054 /* CustomDismissAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomDismissAnimator.h; sourceTree = "<group>"; };
+		CE707931219BFC7C0080C054 /* CustomDismissAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomDismissAnimator.m; sourceTree = "<group>"; };
+		CE707933219C18110080C054 /* CustomPresentInteractiveTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomPresentInteractiveTransition.h; sourceTree = "<group>"; };
+		CE707934219C18110080C054 /* CustomPresentInteractiveTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomPresentInteractiveTransition.m; sourceTree = "<group>"; };
+		CE707936219C1EA30080C054 /* TestAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestAViewController.h; sourceTree = "<group>"; };
+		CE707937219C1EA30080C054 /* TestAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestAViewController.m; sourceTree = "<group>"; };
+		CE707939219C217F0080C054 /* CustomPresentAnimator1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomPresentAnimator1.h; sourceTree = "<group>"; };
+		CE70793A219C217F0080C054 /* CustomPresentAnimator1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomPresentAnimator1.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +163,16 @@
 				CE707921219AD4AE0080C054 /* TabBarController.m */,
 				CE70791D219AC79F0080C054 /* UIViewController+Utils.h */,
 				CE70791E219AC79F0080C054 /* UIViewController+Utils.m */,
+				CE70792D219BF8250080C054 /* CustomPresentAnimator.h */,
+				CE70792E219BF8250080C054 /* CustomPresentAnimator.m */,
+				CE707930219BFC7C0080C054 /* CustomDismissAnimator.h */,
+				CE707931219BFC7C0080C054 /* CustomDismissAnimator.m */,
+				CE707933219C18110080C054 /* CustomPresentInteractiveTransition.h */,
+				CE707934219C18110080C054 /* CustomPresentInteractiveTransition.m */,
+				CE707939219C217F0080C054 /* CustomPresentAnimator1.h */,
+				CE70793A219C217F0080C054 /* CustomPresentAnimator1.m */,
+				CE707936219C1EA30080C054 /* TestAViewController.h */,
+				CE707937219C1EA30080C054 /* TestAViewController.m */,
 			);
 			path = TSTTransitionDemo;
 			sourceTree = "<group>";
@@ -326,13 +351,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE707938219C1EA30080C054 /* TestAViewController.m in Sources */,
 				CE707912219AB0340080C054 /* TSTTransition.m in Sources */,
 				CE70791F219AC7A00080C054 /* UIViewController+Utils.m in Sources */,
+				CE70792F219BF8250080C054 /* CustomPresentAnimator.m in Sources */,
 				CE7077F3219A81300080C054 /* main.m in Sources */,
+				CE70793B219C217F0080C054 /* CustomPresentAnimator1.m in Sources */,
+				CE707935219C18110080C054 /* CustomPresentInteractiveTransition.m in Sources */,
 				CE707916219AB0340080C054 /* UIViewController+TSTTransition.m in Sources */,
 				CE707914219AB0340080C054 /* TSTAnimator.m in Sources */,
 				CE707922219AD4AE0080C054 /* TabBarController.m in Sources */,
 				CE70791C219AC7160080C054 /* TestViewController.m in Sources */,
+				CE707932219BFC7C0080C054 /* CustomDismissAnimator.m in Sources */,
 				CE707913219AB0340080C054 /* TSTTransitionGlobalSetting.m in Sources */,
 				CE707919219AB1090080C054 /* SettingViewController.m in Sources */,
 				CE707905219AAEA60080C054 /* TableViewController.m in Sources */,
