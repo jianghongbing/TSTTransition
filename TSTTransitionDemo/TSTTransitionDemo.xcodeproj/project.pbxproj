@@ -29,6 +29,8 @@
 		CE707935219C18110080C054 /* CustomPresentInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = CE707934219C18110080C054 /* CustomPresentInteractiveTransition.m */; };
 		CE707938219C1EA30080C054 /* TestAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE707937219C1EA30080C054 /* TestAViewController.m */; };
 		CE70793B219C217F0080C054 /* CustomPresentAnimator1.m in Sources */ = {isa = PBXBuildFile; fileRef = CE70793A219C217F0080C054 /* CustomPresentAnimator1.m */; };
+		CE70793E219D580F0080C054 /* CustomDismissInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = CE70793D219D580F0080C054 /* CustomDismissInteractiveTransition.m */; };
+		CE707941219D60840080C054 /* CustomDismissAnimator1.m in Sources */ = {isa = PBXBuildFile; fileRef = CE707940219D60840080C054 /* CustomDismissAnimator1.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +96,10 @@
 		CE707937219C1EA30080C054 /* TestAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestAViewController.m; sourceTree = "<group>"; };
 		CE707939219C217F0080C054 /* CustomPresentAnimator1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomPresentAnimator1.h; sourceTree = "<group>"; };
 		CE70793A219C217F0080C054 /* CustomPresentAnimator1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomPresentAnimator1.m; sourceTree = "<group>"; };
+		CE70793C219D580C0080C054 /* CustomDismissInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomDismissInteractiveTransition.h; sourceTree = "<group>"; };
+		CE70793D219D580F0080C054 /* CustomDismissInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomDismissInteractiveTransition.m; sourceTree = "<group>"; };
+		CE70793F219D60840080C054 /* CustomDismissAnimator1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomDismissAnimator1.h; sourceTree = "<group>"; };
+		CE707940219D60840080C054 /* CustomDismissAnimator1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomDismissAnimator1.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +179,10 @@
 				CE70793A219C217F0080C054 /* CustomPresentAnimator1.m */,
 				CE707936219C1EA30080C054 /* TestAViewController.h */,
 				CE707937219C1EA30080C054 /* TestAViewController.m */,
+				CE70793C219D580C0080C054 /* CustomDismissInteractiveTransition.h */,
+				CE70793D219D580F0080C054 /* CustomDismissInteractiveTransition.m */,
+				CE70793F219D60840080C054 /* CustomDismissAnimator1.h */,
+				CE707940219D60840080C054 /* CustomDismissAnimator1.m */,
 			);
 			path = TSTTransitionDemo;
 			sourceTree = "<group>";
@@ -360,9 +370,11 @@
 				CE707935219C18110080C054 /* CustomPresentInteractiveTransition.m in Sources */,
 				CE707916219AB0340080C054 /* UIViewController+TSTTransition.m in Sources */,
 				CE707914219AB0340080C054 /* TSTAnimator.m in Sources */,
+				CE70793E219D580F0080C054 /* CustomDismissInteractiveTransition.m in Sources */,
 				CE707922219AD4AE0080C054 /* TabBarController.m in Sources */,
 				CE70791C219AC7160080C054 /* TestViewController.m in Sources */,
 				CE707932219BFC7C0080C054 /* CustomDismissAnimator.m in Sources */,
+				CE707941219D60840080C054 /* CustomDismissAnimator1.m in Sources */,
 				CE707913219AB0340080C054 /* TSTTransitionGlobalSetting.m in Sources */,
 				CE707919219AB1090080C054 /* SettingViewController.m in Sources */,
 				CE707905219AAEA60080C054 /* TableViewController.m in Sources */,
