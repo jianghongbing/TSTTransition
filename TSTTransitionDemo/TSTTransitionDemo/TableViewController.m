@@ -16,6 +16,8 @@
 #import "CustomPresentInteractiveTransition.h"
 #import "TestAViewController.h"
 #import "CustomPresentAnimator1.h"
+#import "CustomDismissInteractiveTransition.h"
+#import "CustomDismissAnimator1.h"
 @interface TableViewController()
 @property (nonatomic, strong) NSArray *dataSource;
 @property (nonatomic, strong) UIViewController *willPersentViewController;
@@ -34,7 +36,8 @@
                         @"presentATabBarController",
                         @"customPresentAnimator",
                         @"customDismissAnimator",
-                        @"customPresentInteractiveTransition"];
+                        @"customPresentInteractiveTransition",
+                        @"customDismissInteractiveTransition"];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -109,8 +112,6 @@
 
 
 - (void)customPresentInteractiveTransition {
-    NSLog(@"self.tstTransition:%@, interactiveTransition:%@", self.tst_transition, self.tst_transition.presentInteractiveTransition);
-    
     self.willPersentViewController = [TestAViewController new];
     CustomPresentInteractiveTransition *presentInteractiveTransition = [[CustomPresentInteractiveTransition alloc] initWithViewController:self];
     [presentInteractiveTransition.panGestureRecognizer addTarget:self action:@selector(excuteCustomPresentInteractiveTransition:)];
@@ -150,6 +151,12 @@
 
 
 - (void)customDismissInteractiveTransition {
-    
+    TestAViewController *testAViewController = [TestAViewController new];
+    self.willPersentViewController = testAViewController;
+    CustomDismissInteractiveTransition *dismissInteractiveTransition = [CustomDismissInteractiveTransition new];
+    [dismissInteractiveTransition setPanGestureRecognizer:testAViewController.pangestureRecognizer];
+    self.tst_transition.dismissInteractiveTransition = dismissInteractiveTransition;
+    self.tst_transition.dismissAnimator = [CustomDismissAnimator1 new];
+    [self tst_presentViewController:testAViewController embedInANavigationController:YES animated:YES completion:nil];
 }
 @end

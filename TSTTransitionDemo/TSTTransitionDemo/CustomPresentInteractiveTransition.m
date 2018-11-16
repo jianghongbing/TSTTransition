@@ -70,7 +70,7 @@
     CGFloat height = CGRectGetHeight(containerView.bounds);
     CGFloat yTransition = [panGestureRecognizer translationInView:containerView].y;
     CGFloat percent = MIN(yTransition / height, 0);
-    return fabsf(percent);
+    return fabs(percent);
 }
 
 

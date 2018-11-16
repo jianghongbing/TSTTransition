@@ -10,7 +10,15 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TSTAnimator : NSObject <UIViewControllerAnimatedTransitioning>
-- (instancetype)initWithDuration:(NSTimeInterval)duration;
+- (instancetype)initWithDuration:(NSTimeInterval)duration
+                           alpha:(CGFloat)alpha
+                      widthScale:(CGFloat)widthScale
+                     heightScale:(CGFloat)heightScale
+                     shadowColor:(UIColor *)shadowColor
+                   shadowOpacity:(CGFloat)shadowOpacity
+                    shadowOffset:(CGSize)shadowOffset
+                    shadowRadius:(CGFloat)shadowRadius
+                      shadowPath:(UIBezierPath *)shadowPath;
 @end
 
 NS_ASSUME_NONNULL_END

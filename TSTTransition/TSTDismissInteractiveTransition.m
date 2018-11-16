@@ -10,8 +10,8 @@
 #import "UIViewController+TSTTransitionPrivate.h"
 @interface TSTDismissInteractiveTransition()<UIGestureRecognizerDelegate>
 @property (nonatomic, weak) UIViewController *viewController;
-@property (nonatomic, weak) id<UIViewControllerContextTransitioning> transitionContext;
-@property (nonatomic, strong) UIPanGestureRecognizer *panGestureRecognizer;
+@property (nullable, nonatomic, weak) id<UIViewControllerContextTransitioning> transitionContext;
+@property (nullable, nonatomic, strong) UIPanGestureRecognizer *dimissInteractiveGestureRecognizer;
 @property (nonatomic) CGFloat triggerPercent;
 @property (nonatomic, getter=isEnabledInteractiveDismissTransition) BOOL enabledInteractiveDismissTransition;
 @end
@@ -26,33 +26,29 @@
         _viewController.tst_dismissInteractiveTransition = self;
         _triggerPercent = triggerPercent;
         _enabledInteractiveDismissTransition = enabledInteractiveDismissTransition;
-        [self addGestureRecognizers];
+        [self addGestureRecognizer];
     }
     return self;
 }
 
-- (UIView *)gestureRecognizersView {
-    return self.viewController.view;
-}
-
-- (void)addGestureRecognizers {
+- (void)addGestureRecognizer {
     if(!self.enabledInteractiveDismissTransition) return;
-    UIView *view = [self gestureRecognizersView];
+    UIView *view = self.viewController.view;
     if (view == nil) return;
-    self.panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGestureRecognizerEvent:)];
-    self.panGestureRecognizer.delegate = self;
-    [view addGestureRecognizer:self.panGestureRecognizer];
+    self.dimissInteractiveGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGestureRecognizerEvent:)];
+    self.dimissInteractiveGestureRecognizer.delegate = self;
+    [view addGestureRecognizer:self.dimissInteractiveGestureRecognizer];
 }
 
-- (void)removeGestureRecognizers {
-    UIView *view = [self gestureRecognizersView];
+- (void)removeGestureRecognizer {
+    UIView *view = self.viewController.view;
     if (view == nil) return;
-    [view removeGestureRecognizer:self.panGestureRecognizer];
+    [view removeGestureRecognizer:self.dimissInteractiveGestureRecognizer];
 }
 
 
 - (void)dealloc {
-    [self removeGestureRecognizers];
+    [self removeGestureRecognizer];
 }
 
 - (void)handlePanGestureRecognizerEvent:(UIPanGestureRecognizer *)panGestureRecognizer {
@@ -127,6 +123,12 @@
 
 
 #pragma mark UIGestureRecognizerDelegate
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
+    UIView *view = gestureRecognizer.view;
+    CGFloat translationX = [self.dimissInteractiveGestureRecognizer translationInView:view].x;
+    return translationX > 0;
+}
+
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
     if ([self.viewController isKindOfClass:[UINavigationController class]]) {
         UINavigationController *navigationController = (UINavigationController *)self.viewController;
@@ -134,9 +136,4 @@
     }
     return YES;
 }
-
-//- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRequireFailureOfGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
-//    return YES;
-//}
-
 @end

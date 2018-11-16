@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TestAViewController : UIViewController
+@property (nonatomic, strong, readonly) UIPanGestureRecognizer *pangestureRecognizer;
 
 @end
 

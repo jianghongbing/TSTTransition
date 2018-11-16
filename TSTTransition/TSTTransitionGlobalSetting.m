@@ -9,13 +9,13 @@
 #import "TSTTransitionGlobalSetting.h"
 @implementation TSTTransitionGlobalSetting
 
-+ (instancetype)golbalSetting {
++ (instancetype)globalSetting {
     static dispatch_once_t onceToken;
-    static TSTTransitionGlobalSetting *golbalSetting;
+    static TSTTransitionGlobalSetting *globalSetting;
     dispatch_once(&onceToken, ^{
-        golbalSetting = [[TSTTransitionGlobalSetting alloc] init];
+        globalSetting = [[TSTTransitionGlobalSetting alloc] init];
     });
-    return golbalSetting;
+    return globalSetting;
 }
 - (instancetype)init {
     self = [super init];
@@ -30,7 +30,8 @@
     _duration = 0.25;
     _enabledInteractiveDismissTransition = YES;
     _triggerPercent = 0.3;
+    _alpha = 0.9;
+    _widthScale = 1.0;
+    _heightScale = 0.9;
 }
-
-
 @end

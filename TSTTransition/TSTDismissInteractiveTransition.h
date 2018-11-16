@@ -14,7 +14,7 @@ typedef void(^TSTDismissInteractiveTransitionCompletion)(BOOL finished);
 @optional
 - (void)dismissInteractiveTransition:(TSTDismissInteractiveTransition *)dismissInteractiveTransition didFinish:(BOOL)finished;
 
-- (void)dismissInteractiveTransition:(TSTDismissInteractiveTransition *)dismissInteractiveTransition updateAnimationProgress:(float)animationProgress;
+- (void)dismissInteractiveTransition:(TSTDismissInteractiveTransition *)dismissInteractiveTransition updateAnimationProgress:(float)progress;
 
 
 @end
@@ -23,6 +23,7 @@ typedef void(^TSTDismissInteractiveTransitionCompletion)(BOOL finished);
 - (instancetype)initWithViewController:(nonnull UIViewController *)viewController
                         triggerPercent:(CGFloat)triggerPercent
    enabledInteractiveDismissTransition:(BOOL)enabledInteractiveDismissTransition;
+@property (nullable, nonatomic, strong, readonly) UIPanGestureRecognizer *dimissInteractiveGestureRecognizer;
 @property (nullable, nonatomic, weak) id<TSTInteractiveDismissTransitionDelegate> delegate;
 @property (nullable, nonatomic, copy) TSTDismissInteractiveTransitionCompletion completion;
 
