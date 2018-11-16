@@ -7,13 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
 //! Project version number for TSTTransition.
 FOUNDATION_EXPORT double TSTTransitionVersionNumber;
-
 //! Project version string for TSTTransition.
 FOUNDATION_EXPORT const unsigned char TSTTransitionVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <TSTTransition/PublicHeader.h>
-
-
+#import <TSTTransition/TSTTransition.h>
+#import <TSTTransition/TSTDismissInterfactiveTransition.h>
+#import <TSTTransition/TSTTransitionGlobalSetting.h>
