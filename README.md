@@ -2,17 +2,17 @@
 TSTTransition是模仿腾讯体育iOS app的viewController的转场动画
 
 ## 起源
-由于本人平时比较喜欢看NBA, 因此在手机上下载了腾讯体育app, 在平时使用的过程中, 发现该app的转场动画,发现控制器之间的动画不会受到导航栏和标签栏的影响, 每个viewController都有独立的UINavigationBar,由于比较好奇, 就写了很多的demo,发现该动画有点难以实现. 后来发觉到, 实际上是在presentViewController的时候,给每个viewController嵌入了一个独立的UINavigationViewController,这是关键所在,于是便动手写了 TSTTransition.
+由于本人平时比较喜欢看NBA, 因此在手机上下载了腾讯体育app, 在平时使用的过程中, 发现该app的转场动画,控制器之间的动画不会受到导航栏和标签栏的影响, 每个viewController都有独立的UINavigationBar,由于比较好奇, 就写了很多的demo,发现该动画有点难以实现. 后来发觉到, 实际上是在presentViewController的时候,给每个viewController嵌入了一个独立的UINavigationViewController,这是关键所在,于是便动手写了 TSTTransition.
 
 ## 安装
 ### 使用cocoapods 
-在项目的podfile文件中, `pod TSTTransition`
+在项目的podfile文件中, `pod 'TSTTransition'`
 
 ### 手动安装
 将TSTTransition的源文件直接添加到你的项目中
 
 ## 要求
-* iOS 7.0 or later
+* iOS 7.0及以后
 
 ## 使用
 详细可以参考TSTTransition里面提供的demo
