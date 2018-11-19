@@ -31,6 +31,7 @@
 		CE70793B219C217F0080C054 /* CustomPresentAnimator1.m in Sources */ = {isa = PBXBuildFile; fileRef = CE70793A219C217F0080C054 /* CustomPresentAnimator1.m */; };
 		CE70793E219D580F0080C054 /* CustomDismissInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = CE70793D219D580F0080C054 /* CustomDismissInteractiveTransition.m */; };
 		CE707941219D60840080C054 /* CustomDismissAnimator1.m in Sources */ = {isa = PBXBuildFile; fileRef = CE707940219D60840080C054 /* CustomDismissAnimator1.m */; };
+		CEDA037021A2672300790AFF /* TestBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDA036F21A2672200790AFF /* TestBViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,8 @@
 		CE70793D219D580F0080C054 /* CustomDismissInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomDismissInteractiveTransition.m; sourceTree = "<group>"; };
 		CE70793F219D60840080C054 /* CustomDismissAnimator1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomDismissAnimator1.h; sourceTree = "<group>"; };
 		CE707940219D60840080C054 /* CustomDismissAnimator1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomDismissAnimator1.m; sourceTree = "<group>"; };
+		CEDA036E21A2672200790AFF /* TestBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestBViewController.h; sourceTree = "<group>"; };
+		CEDA036F21A2672200790AFF /* TestBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestBViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +186,8 @@
 				CE70793D219D580F0080C054 /* CustomDismissInteractiveTransition.m */,
 				CE70793F219D60840080C054 /* CustomDismissAnimator1.h */,
 				CE707940219D60840080C054 /* CustomDismissAnimator1.m */,
+				CEDA036E21A2672200790AFF /* TestBViewController.h */,
+				CEDA036F21A2672200790AFF /* TestBViewController.m */,
 			);
 			path = TSTTransitionDemo;
 			sourceTree = "<group>";
@@ -370,6 +375,7 @@
 				CE707935219C18110080C054 /* CustomPresentInteractiveTransition.m in Sources */,
 				CE707916219AB0340080C054 /* UIViewController+TSTTransition.m in Sources */,
 				CE707914219AB0340080C054 /* TSTAnimator.m in Sources */,
+				CEDA037021A2672300790AFF /* TestBViewController.m in Sources */,
 				CE70793E219D580F0080C054 /* CustomDismissInteractiveTransition.m in Sources */,
 				CE707922219AD4AE0080C054 /* TabBarController.m in Sources */,
 				CE70791C219AC7160080C054 /* TestViewController.m in Sources */,

@@ -11,6 +11,6 @@
 FOUNDATION_EXPORT double TSTTransitionVersionNumber;
 //! Project version string for TSTTransition.
 FOUNDATION_EXPORT const unsigned char TSTTransitionVersionString[];
-#import <TSTTransition/TSTTransition.h>
-#import <TSTTransition/TSTDismissInterfactiveTransition.h>
-#import <TSTTransition/TSTTransitionGlobalSetting.h>
+#import "TSTTransition.h"
+#import "TSTDismissInteractiveTransition.h"
+#import "TSTTransitionGlobalSetting.h"
