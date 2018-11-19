@@ -18,6 +18,7 @@
 #import "CustomPresentAnimator1.h"
 #import "CustomDismissInteractiveTransition.h"
 #import "CustomDismissAnimator1.h"
+#import "TestBViewController.h"
 @interface TableViewController()
 @property (nonatomic, strong) NSArray *dataSource;
 @property (nonatomic, strong) UIViewController *willPersentViewController;
@@ -37,7 +38,9 @@
                         @"customPresentAnimator",
                         @"customDismissAnimator",
                         @"customPresentInteractiveTransition",
-                        @"customDismissInteractiveTransition"];
+                        @"customDismissInteractiveTransition",
+                        @"addShadow",
+                        @"sloveGestureRecognizersConflict"];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -159,4 +162,19 @@
     self.tst_transition.dismissAnimator = [CustomDismissAnimator1 new];
     [self tst_presentViewController:testAViewController embedInANavigationController:YES animated:YES completion:nil];
 }
+
+- (void)addShadow {
+    self.tst_transition.shadowColor = [UIColor redColor];
+    self.tst_transition.shadowOffset = CGSizeMake(-1, 0);
+    self.tst_transition.shadowRadius = 3.0;
+    self.tst_transition.shadowOpacity = 0.75;
+    [self presentAViewController];
+}
+
+- (void)sloveGestureRecognizersConflict {
+    [self tst_presentViewController:[TestBViewController new] animated:YES completion:nil];
+}
+
+
+
 @end

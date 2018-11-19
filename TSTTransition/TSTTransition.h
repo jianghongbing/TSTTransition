@@ -57,15 +57,15 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, strong) UIColor *shadowColor;
 
 /* The opacity of the shadow. Defaults to 0 */
-@property (nonatomic) CGFloat shadowOpacity;
+@property (nonatomic, readonly) CGFloat shadowOpacity;
 - (void)setShadowOpacity:(CGFloat)shadowOpacity;
 
 /* The shadow offset. Defaults to CGSizeZero */
-@property (nonatomic) CGSize shadowOffset;
+@property (nonatomic, readonly) CGSize shadowOffset;
 - (void)setShadowOffset:(CGSize)shadowOffset;
 
 /* The blur radius used to create the shadow. Defaults to 0 */
-@property (nonatomic) CGFloat shadowRadius;
+@property (nonatomic, readonly) CGFloat shadowRadius;
 - (void)setShadowRadius:(CGFloat)shadowRadius;
 
 /* The path of shadow. Default is nil */

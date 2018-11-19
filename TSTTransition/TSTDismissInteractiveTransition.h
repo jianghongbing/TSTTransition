@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 NS_ASSUME_NONNULL_BEGIN
 @class TSTDismissInteractiveTransition;
-typedef void(^TSTDismissInteractiveTransitionCompletion)(BOOL finished);
 @protocol TSTInteractiveDismissTransitionDelegate <NSObject>
 @optional
 - (void)dismissInteractiveTransition:(TSTDismissInteractiveTransition *)dismissInteractiveTransition didFinish:(BOOL)finished;
@@ -23,10 +22,8 @@ typedef void(^TSTDismissInteractiveTransitionCompletion)(BOOL finished);
 - (instancetype)initWithViewController:(nonnull UIViewController *)viewController
                         triggerPercent:(CGFloat)triggerPercent
    enabledInteractiveDismissTransition:(BOOL)enabledInteractiveDismissTransition;
-@property (nullable, nonatomic, strong, readonly) UIPanGestureRecognizer *dimissInteractiveGestureRecognizer;
+@property (nullable, nonatomic, strong, readonly) UIPanGestureRecognizer *dismissInteractiveGestureRecognizer;
 @property (nullable, nonatomic, weak) id<TSTInteractiveDismissTransitionDelegate> delegate;
-@property (nullable, nonatomic, copy) TSTDismissInteractiveTransitionCompletion completion;
-
 @end
 
 NS_ASSUME_NONNULL_END

@@ -27,7 +27,7 @@
 }
 
 - (void)addButton {
-    UIButton *pushButton = [self createAButtonWithTitle:@"Push" selector:@selector(pushAViewController:)];
+    UIButton *pushButton = [self createAButtonWithTitle:@"Present" selector:@selector(pushAViewController:)];
     if (@available(iOS 9.0, *)) {
         [pushButton.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor].active = YES;
         [pushButton.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor].active = YES;

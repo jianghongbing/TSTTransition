@@ -18,19 +18,19 @@
     UIView *containerView = transitionContext.containerView;
     
     UIViewController *toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
-    UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+//    UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     
     CGRect toViewFinalFrame = [transitionContext finalFrameForViewController:toViewController];
     CGRect toViewInitialFrame = CGRectOffset(toViewFinalFrame, CGRectGetWidth(toViewFinalFrame), 0);
     
     UIView *toView;
-    UIView *fromView;
+//    UIView *fromView;
     if (@available(iOS 8.0, *)) {
         toView = [transitionContext viewForKey:UITransitionContextToViewKey];
-        fromView = [transitionContext viewForKey:UITransitionContextFromViewKey];
+//        fromView = [transitionContext viewForKey:UITransitionContextFromViewKey];
     } else {
         toView = toViewController.view;
-        fromView = fromViewController.view;
+//        fromView = fromViewController.view;
     }
     
     

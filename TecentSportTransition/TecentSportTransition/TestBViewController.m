@@ -29,8 +29,8 @@
 }
 
 - (void)addButtons {
-    UIButton *pushButton = [self createAButtonWithTitle:@"Push" selector:@selector(pushViewController:)];
-    UIButton *dismissButton = [self createAButtonWithTitle:@"Dimiss" selector:@selector(dismiss:)];
+    UIButton *pushButton = [self createAButtonWithTitle:@"Present" selector:@selector(pushViewController:)];
+    UIButton *dismissButton = [self createAButtonWithTitle:@"Dismiss" selector:@selector(dismiss:)];
     
     if (@available(iOS 9.0, *)) {
         [pushButton.trailingAnchor constraintEqualToAnchor:self.view.centerXAnchor constant:-10].active = YES;

@@ -11,7 +11,7 @@
 @interface TSTDismissInteractiveTransition()<UIGestureRecognizerDelegate>
 @property (nonatomic, weak) UIViewController *viewController;
 @property (nullable, nonatomic, weak) id<UIViewControllerContextTransitioning> transitionContext;
-@property (nullable, nonatomic, strong) UIPanGestureRecognizer *dimissInteractiveGestureRecognizer;
+@property (nullable, nonatomic, strong) UIPanGestureRecognizer *dismissInteractiveGestureRecognizer;
 @property (nonatomic) CGFloat triggerPercent;
 @property (nonatomic, getter=isEnabledInteractiveDismissTransition) BOOL enabledInteractiveDismissTransition;
 @end
@@ -35,15 +35,15 @@
     if(!self.enabledInteractiveDismissTransition) return;
     UIView *view = self.viewController.view;
     if (view == nil) return;
-    self.dimissInteractiveGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGestureRecognizerEvent:)];
-    self.dimissInteractiveGestureRecognizer.delegate = self;
-    [view addGestureRecognizer:self.dimissInteractiveGestureRecognizer];
+    self.dismissInteractiveGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGestureRecognizerEvent:)];
+    self.dismissInteractiveGestureRecognizer.delegate = self;
+    [view addGestureRecognizer:self.dismissInteractiveGestureRecognizer];
 }
 
 - (void)removeGestureRecognizer {
     UIView *view = self.viewController.view;
     if (view == nil) return;
-    [view removeGestureRecognizer:self.dimissInteractiveGestureRecognizer];
+    [view removeGestureRecognizer:self.dismissInteractiveGestureRecognizer];
 }
 
 
@@ -111,11 +111,7 @@
     [super cancelInteractiveTransition];
 }
 
-- (void)updateTransitionFinishStateToDelegate:(BOOL)finished {
-    if (self.completion) {
-        self.completion((finished));
-    }
-    
+- (void)updateTransitionFinishStateToDelegate:(BOOL)finished {    
     if (self.delegate && [self.delegate respondsToSelector:@selector(dismissInteractiveTransition:didFinish:)]) {
         [self.delegate dismissInteractiveTransition:self didFinish:finished];
     }
@@ -125,7 +121,7 @@
 #pragma mark UIGestureRecognizerDelegate
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
     UIView *view = gestureRecognizer.view;
-    CGFloat translationX = [self.dimissInteractiveGestureRecognizer translationInView:view].x;
+    CGFloat translationX = [self.dismissInteractiveGestureRecognizer translationInView:view].x;
     return translationX > 0;
 }
 
