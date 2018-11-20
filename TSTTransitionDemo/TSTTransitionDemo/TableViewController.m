@@ -7,7 +7,6 @@
 //
 
 #import "TableViewController.h"
-#import "UIViewController+TSTTransition.h"
 #import "TestViewController.h"
 #import "SettingViewController.h"
 #import "TabBarController.h"
@@ -19,6 +18,7 @@
 #import "CustomDismissInteractiveTransition.h"
 #import "CustomDismissAnimator1.h"
 #import "TestBViewController.h"
+#import "TSTTransitionHeader.h"
 @interface TableViewController()
 @property (nonatomic, strong) NSArray *dataSource;
 @property (nonatomic, strong) UIViewController *willPersentViewController;

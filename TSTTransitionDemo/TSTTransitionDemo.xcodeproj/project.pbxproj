@@ -101,6 +101,7 @@
 		CE70793D219D580F0080C054 /* CustomDismissInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomDismissInteractiveTransition.m; sourceTree = "<group>"; };
 		CE70793F219D60840080C054 /* CustomDismissAnimator1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomDismissAnimator1.h; sourceTree = "<group>"; };
 		CE707940219D60840080C054 /* CustomDismissAnimator1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomDismissAnimator1.m; sourceTree = "<group>"; };
+		CE79953621A39CDF00537B75 /* TSTTransitionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTTransitionHeader.h; sourceTree = "<group>"; };
 		CEDA036E21A2672200790AFF /* TestBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestBViewController.h; sourceTree = "<group>"; };
 		CEDA036F21A2672200790AFF /* TestBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestBViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -220,6 +221,7 @@
 		CE707906219AB0330080C054 /* TSTTransition */ = {
 			isa = PBXGroup;
 			children = (
+				CE79953621A39CDF00537B75 /* TSTTransitionHeader.h */,
 				CE70790E219AB0330080C054 /* TSTTransition.h */,
 				CE707907219AB0330080C054 /* TSTTransition.m */,
 				CE707908219AB0330080C054 /* TSTDismissInteractiveTransition.h */,

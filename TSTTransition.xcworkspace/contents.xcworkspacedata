@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:TSTTransition.podspec">
+   </FileRef>
+   <FileRef
       location = "group:Framework/TSTTransition.xcodeproj">
    </FileRef>
    <FileRef

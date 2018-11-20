@@ -94,7 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				CE707942219ECC330080C054 /* TSTTransition */,
-				CE7077C0219A7FB50080C054 /* TSTTransitionHeader.h */,
 				CE7077C1219A7FB50080C054 /* Info.plist */,
 			);
 			path = TSTTransition;
@@ -112,17 +111,18 @@
 		CE707942219ECC330080C054 /* TSTTransition */ = {
 			isa = PBXGroup;
 			children = (
+				CE7077C0219A7FB50080C054 /* TSTTransitionHeader.h */,
+				CE70794A219ECC330080C054 /* TSTTransition.h */,
 				CE707943219ECC330080C054 /* TSTTransition.m */,
-				CE707944219ECC330080C054 /* TSTDismissInteractiveTransition.h */,
-				CE707945219ECC330080C054 /* TSTTransitionGlobalSetting.m */,
+				CE70794C219ECC330080C054 /* TSTAnimator.h */,
 				CE707946219ECC330080C054 /* TSTAnimator.m */,
 				CE707947219ECC330080C054 /* UIViewController+TSTTransition.h */,
-				CE707948219ECC330080C054 /* UIViewController+TSTTransitionPrivate.h */,
-				CE707949219ECC330080C054 /* TSTDismissInteractiveTransition.m */,
-				CE70794A219ECC330080C054 /* TSTTransition.h */,
-				CE70794B219ECC330080C054 /* TSTTransitionGlobalSetting.h */,
-				CE70794C219ECC330080C054 /* TSTAnimator.h */,
 				CE70794D219ECC330080C054 /* UIViewController+TSTTransition.m */,
+				CE707944219ECC330080C054 /* TSTDismissInteractiveTransition.h */,
+				CE707949219ECC330080C054 /* TSTDismissInteractiveTransition.m */,
+				CE707945219ECC330080C054 /* TSTTransitionGlobalSetting.m */,
+				CE70794B219ECC330080C054 /* TSTTransitionGlobalSetting.h */,
+				CE707948219ECC330080C054 /* UIViewController+TSTTransitionPrivate.h */,
 			);
 			name = TSTTransition;
 			path = ../../TSTTransition;

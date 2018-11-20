@@ -11,6 +11,7 @@
 FOUNDATION_EXPORT double TSTTransitionVersionNumber;
 //! Project version string for TSTTransition.
 FOUNDATION_EXPORT const unsigned char TSTTransitionVersionString[];
+#import "UIViewController+TSTTransition.h"
 #import "TSTTransition.h"
 #import "TSTDismissInteractiveTransition.h"
 #import "TSTTransitionGlobalSetting.h"
