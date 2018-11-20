@@ -5,6 +5,9 @@
       location = "group:TSTTransition.podspec">
    </FileRef>
    <FileRef
+      location = "group:README.md">
+   </FileRef>
+   <FileRef
       location = "group:Framework/TSTTransition.xcodeproj">
    </FileRef>
    <FileRef
