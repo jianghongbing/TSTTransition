@@ -7,6 +7,8 @@
 //
 
 #import "UIViewController+TSTTransition.h"
+#import "TSTTransition.h"
+#import "TSTDismissInteractiveTransition.h"
 #import <objc/runtime.h>
 @implementation UIViewController (TSTTransition)
 - (TSTTransition *)tst_transition {

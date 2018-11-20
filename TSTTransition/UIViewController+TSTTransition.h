@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TSTTransition.h"
-#import "TSTDismissInteractiveTransition.h"
+@class TSTTransition, TSTDismissInteractiveTransition;
 NS_ASSUME_NONNULL_BEGIN
 @interface UIViewController (TSTTransition)
 

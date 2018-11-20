@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "7.0"
   s.source       = { :git => "https://github.com/jianghongbing/TSTTransition.git", :tag => "#{s.version}" }
   s.source_files  = "TSTTransition/*.{h,m}"
-  s.public_header_files = "TSTTransition/TSTTransitionHeader.h"
-  s.framework  = "UIKit"
+  s.framework  = "UIKit", "Foundation", "CoreGraphics"
+  s.author = "jianghongbing"
   s.requires_arc = true
 end

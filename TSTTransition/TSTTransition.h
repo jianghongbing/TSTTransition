@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 NS_ASSUME_NONNULL_BEGIN
-
-
 @interface TSTTransition : NSObject <UIViewControllerTransitioningDelegate>
 //custom your own animator as TSTTTranstion presentation amimator,default is nil and use TSTTAnimator
 @property (nullable, nonatomic, strong) id<UIViewControllerAnimatedTransitioning> presentAnimator;
