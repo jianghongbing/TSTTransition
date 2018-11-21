@@ -9,18 +9,18 @@
 /* Begin PBXBuildFile section */
 		CE7077C7219A7FB50080C054 /* TSTTransition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7077BD219A7FB50080C054 /* TSTTransition.framework */; };
 		CE7077CC219A7FB50080C054 /* TSTTransitionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7077CB219A7FB50080C054 /* TSTTransitionTests.m */; };
-		CE79957C21A3D5FC00537B75 /* TSTTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = CE79957021A3D5FB00537B75 /* TSTTransition.m */; };
-		CE79957D21A3D5FC00537B75 /* TSTTransitionGlobalSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = CE79957121A3D5FB00537B75 /* TSTTransitionGlobalSetting.m */; };
-		CE79957E21A3D5FC00537B75 /* TSTTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = CE79957221A3D5FB00537B75 /* TSTTransition.h */; };
-		CE79957F21A3D5FC00537B75 /* TSTTransitionHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = CE79957321A3D5FC00537B75 /* TSTTransitionHeader.h */; };
-		CE79958021A3D5FC00537B75 /* UIViewController+TSTTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = CE79957421A3D5FC00537B75 /* UIViewController+TSTTransition.m */; };
-		CE79958121A3D5FC00537B75 /* TSTDismissInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = CE79957521A3D5FC00537B75 /* TSTDismissInteractiveTransition.m */; };
-		CE79958221A3D5FC00537B75 /* TSTAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = CE79957621A3D5FC00537B75 /* TSTAnimator.m */; };
-		CE79958321A3D5FC00537B75 /* TSTTransitionGlobalSetting.h in Headers */ = {isa = PBXBuildFile; fileRef = CE79957721A3D5FC00537B75 /* TSTTransitionGlobalSetting.h */; };
-		CE79958421A3D5FC00537B75 /* UIViewController+TSTTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = CE79957821A3D5FC00537B75 /* UIViewController+TSTTransition.h */; };
-		CE79958521A3D5FC00537B75 /* TSTAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = CE79957921A3D5FC00537B75 /* TSTAnimator.h */; };
-		CE79958621A3D5FC00537B75 /* UIViewController+TSTTransitionPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = CE79957A21A3D5FC00537B75 /* UIViewController+TSTTransitionPrivate.h */; };
-		CE79958721A3D5FC00537B75 /* TSTDismissInteractiveTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = CE79957B21A3D5FC00537B75 /* TSTDismissInteractiveTransition.h */; };
+		CE7995C021A4F4B400537B75 /* TSTDismissInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7995B321A4F4B300537B75 /* TSTDismissInteractiveTransition.m */; };
+		CE7995C121A4F4B400537B75 /* UIViewController+TSTTransitionPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = CE7995B421A4F4B300537B75 /* UIViewController+TSTTransitionPrivate.h */; };
+		CE7995C221A4F4B400537B75 /* TSTDismissInteractiveTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = CE7995B521A4F4B300537B75 /* TSTDismissInteractiveTransition.h */; };
+		CE7995C321A4F4B400537B75 /* TSTTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = CE7995B621A4F4B300537B75 /* TSTTransition.h */; };
+		CE7995C421A4F4B400537B75 /* UIViewController+TSTTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7995B721A4F4B300537B75 /* UIViewController+TSTTransition.m */; };
+		CE7995C521A4F4B400537B75 /* TSTAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7995B821A4F4B300537B75 /* TSTAnimator.m */; };
+		CE7995C621A4F4B400537B75 /* TSTTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7995B921A4F4B300537B75 /* TSTTransition.m */; };
+		CE7995C721A4F4B400537B75 /* TSTTransitionGlobalSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7995BA21A4F4B300537B75 /* TSTTransitionGlobalSetting.m */; };
+		CE7995C821A4F4B400537B75 /* TSTTransitionHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = CE7995BB21A4F4B300537B75 /* TSTTransitionHeader.h */; };
+		CE7995C921A4F4B400537B75 /* UIViewController+TSTTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = CE7995BC21A4F4B300537B75 /* UIViewController+TSTTransition.h */; };
+		CE7995CA21A4F4B400537B75 /* TSTAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = CE7995BD21A4F4B400537B75 /* TSTAnimator.h */; };
+		CE7995CB21A4F4B400537B75 /* TSTTransitionGlobalSetting.h in Headers */ = {isa = PBXBuildFile; fileRef = CE7995BE21A4F4B400537B75 /* TSTTransitionGlobalSetting.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,22 +35,22 @@
 
 /* Begin PBXFileReference section */
 		CE7077BD219A7FB50080C054 /* TSTTransition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TSTTransition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE7077C1219A7FB50080C054 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE7077C6219A7FB50080C054 /* TSTTransitionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TSTTransitionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE7077CB219A7FB50080C054 /* TSTTransitionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSTTransitionTests.m; sourceTree = "<group>"; };
 		CE7077CD219A7FB50080C054 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE79957021A3D5FB00537B75 /* TSTTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSTTransition.m; path = ../../TSTTransition/TSTTransition.m; sourceTree = "<group>"; };
-		CE79957121A3D5FB00537B75 /* TSTTransitionGlobalSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSTTransitionGlobalSetting.m; path = ../../TSTTransition/TSTTransitionGlobalSetting.m; sourceTree = "<group>"; };
-		CE79957221A3D5FB00537B75 /* TSTTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSTTransition.h; path = ../../TSTTransition/TSTTransition.h; sourceTree = "<group>"; };
-		CE79957321A3D5FC00537B75 /* TSTTransitionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSTTransitionHeader.h; path = ../../TSTTransition/TSTTransitionHeader.h; sourceTree = "<group>"; };
-		CE79957421A3D5FC00537B75 /* UIViewController+TSTTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+TSTTransition.m"; path = "../../TSTTransition/UIViewController+TSTTransition.m"; sourceTree = "<group>"; };
-		CE79957521A3D5FC00537B75 /* TSTDismissInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSTDismissInteractiveTransition.m; path = ../../TSTTransition/TSTDismissInteractiveTransition.m; sourceTree = "<group>"; };
-		CE79957621A3D5FC00537B75 /* TSTAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSTAnimator.m; path = ../../TSTTransition/TSTAnimator.m; sourceTree = "<group>"; };
-		CE79957721A3D5FC00537B75 /* TSTTransitionGlobalSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSTTransitionGlobalSetting.h; path = ../../TSTTransition/TSTTransitionGlobalSetting.h; sourceTree = "<group>"; };
-		CE79957821A3D5FC00537B75 /* UIViewController+TSTTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+TSTTransition.h"; path = "../../TSTTransition/UIViewController+TSTTransition.h"; sourceTree = "<group>"; };
-		CE79957921A3D5FC00537B75 /* TSTAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSTAnimator.h; path = ../../TSTTransition/TSTAnimator.h; sourceTree = "<group>"; };
-		CE79957A21A3D5FC00537B75 /* UIViewController+TSTTransitionPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+TSTTransitionPrivate.h"; path = "../../TSTTransition/UIViewController+TSTTransitionPrivate.h"; sourceTree = "<group>"; };
-		CE79957B21A3D5FC00537B75 /* TSTDismissInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSTDismissInteractiveTransition.h; path = ../../TSTTransition/TSTDismissInteractiveTransition.h; sourceTree = "<group>"; };
+		CE7995B321A4F4B300537B75 /* TSTDismissInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTDismissInteractiveTransition.m; sourceTree = "<group>"; };
+		CE7995B421A4F4B300537B75 /* UIViewController+TSTTransitionPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TSTTransitionPrivate.h"; sourceTree = "<group>"; };
+		CE7995B521A4F4B300537B75 /* TSTDismissInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTDismissInteractiveTransition.h; sourceTree = "<group>"; };
+		CE7995B621A4F4B300537B75 /* TSTTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTTransition.h; sourceTree = "<group>"; };
+		CE7995B721A4F4B300537B75 /* UIViewController+TSTTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TSTTransition.m"; sourceTree = "<group>"; };
+		CE7995B821A4F4B300537B75 /* TSTAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTAnimator.m; sourceTree = "<group>"; };
+		CE7995B921A4F4B300537B75 /* TSTTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTTransition.m; sourceTree = "<group>"; };
+		CE7995BA21A4F4B300537B75 /* TSTTransitionGlobalSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTTransitionGlobalSetting.m; sourceTree = "<group>"; };
+		CE7995BB21A4F4B300537B75 /* TSTTransitionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTTransitionHeader.h; sourceTree = "<group>"; };
+		CE7995BC21A4F4B300537B75 /* UIViewController+TSTTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TSTTransition.h"; sourceTree = "<group>"; };
+		CE7995BD21A4F4B400537B75 /* TSTAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTAnimator.h; sourceTree = "<group>"; };
+		CE7995BE21A4F4B400537B75 /* TSTTransitionGlobalSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTTransitionGlobalSetting.h; sourceTree = "<group>"; };
+		CE7995BF21A4F4B400537B75 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,19 +93,19 @@
 		CE7077BF219A7FB50080C054 /* TSTTransition */ = {
 			isa = PBXGroup;
 			children = (
-				CE79957921A3D5FC00537B75 /* TSTAnimator.h */,
-				CE79957621A3D5FC00537B75 /* TSTAnimator.m */,
-				CE79957B21A3D5FC00537B75 /* TSTDismissInteractiveTransition.h */,
-				CE79957521A3D5FC00537B75 /* TSTDismissInteractiveTransition.m */,
-				CE79957221A3D5FB00537B75 /* TSTTransition.h */,
-				CE79957021A3D5FB00537B75 /* TSTTransition.m */,
-				CE79957721A3D5FC00537B75 /* TSTTransitionGlobalSetting.h */,
-				CE79957121A3D5FB00537B75 /* TSTTransitionGlobalSetting.m */,
-				CE79957321A3D5FC00537B75 /* TSTTransitionHeader.h */,
-				CE79957821A3D5FC00537B75 /* UIViewController+TSTTransition.h */,
-				CE79957421A3D5FC00537B75 /* UIViewController+TSTTransition.m */,
-				CE79957A21A3D5FC00537B75 /* UIViewController+TSTTransitionPrivate.h */,
-				CE7077C1219A7FB50080C054 /* Info.plist */,
+				CE7995BF21A4F4B400537B75 /* Info.plist */,
+				CE7995BD21A4F4B400537B75 /* TSTAnimator.h */,
+				CE7995B821A4F4B300537B75 /* TSTAnimator.m */,
+				CE7995B521A4F4B300537B75 /* TSTDismissInteractiveTransition.h */,
+				CE7995B321A4F4B300537B75 /* TSTDismissInteractiveTransition.m */,
+				CE7995B621A4F4B300537B75 /* TSTTransition.h */,
+				CE7995B921A4F4B300537B75 /* TSTTransition.m */,
+				CE7995BE21A4F4B400537B75 /* TSTTransitionGlobalSetting.h */,
+				CE7995BA21A4F4B300537B75 /* TSTTransitionGlobalSetting.m */,
+				CE7995BB21A4F4B300537B75 /* TSTTransitionHeader.h */,
+				CE7995BC21A4F4B300537B75 /* UIViewController+TSTTransition.h */,
+				CE7995B721A4F4B300537B75 /* UIViewController+TSTTransition.m */,
+				CE7995B421A4F4B300537B75 /* UIViewController+TSTTransitionPrivate.h */,
 			);
 			path = TSTTransition;
 			sourceTree = "<group>";
@@ -126,13 +126,13 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE79958621A3D5FC00537B75 /* UIViewController+TSTTransitionPrivate.h in Headers */,
-				CE79958421A3D5FC00537B75 /* UIViewController+TSTTransition.h in Headers */,
-				CE79958321A3D5FC00537B75 /* TSTTransitionGlobalSetting.h in Headers */,
-				CE79957F21A3D5FC00537B75 /* TSTTransitionHeader.h in Headers */,
-				CE79958721A3D5FC00537B75 /* TSTDismissInteractiveTransition.h in Headers */,
-				CE79958521A3D5FC00537B75 /* TSTAnimator.h in Headers */,
-				CE79957E21A3D5FC00537B75 /* TSTTransition.h in Headers */,
+				CE7995CB21A4F4B400537B75 /* TSTTransitionGlobalSetting.h in Headers */,
+				CE7995C121A4F4B400537B75 /* UIViewController+TSTTransitionPrivate.h in Headers */,
+				CE7995C221A4F4B400537B75 /* TSTDismissInteractiveTransition.h in Headers */,
+				CE7995C921A4F4B400537B75 /* UIViewController+TSTTransition.h in Headers */,
+				CE7995C821A4F4B400537B75 /* TSTTransitionHeader.h in Headers */,
+				CE7995C321A4F4B400537B75 /* TSTTransition.h in Headers */,
+				CE7995CA21A4F4B400537B75 /* TSTAnimator.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,7 +181,7 @@
 		CE7077B4219A7FB50080C054 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = jianghongbing;
 				TargetAttributes = {
 					CE7077BC219A7FB50080C054 = {
@@ -232,11 +232,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE79958121A3D5FC00537B75 /* TSTDismissInteractiveTransition.m in Sources */,
-				CE79957D21A3D5FC00537B75 /* TSTTransitionGlobalSetting.m in Sources */,
-				CE79957C21A3D5FC00537B75 /* TSTTransition.m in Sources */,
-				CE79958221A3D5FC00537B75 /* TSTAnimator.m in Sources */,
-				CE79958021A3D5FC00537B75 /* UIViewController+TSTTransition.m in Sources */,
+				CE7995C621A4F4B400537B75 /* TSTTransition.m in Sources */,
+				CE7995C421A4F4B400537B75 /* UIViewController+TSTTransition.m in Sources */,
+				CE7995C721A4F4B400537B75 /* TSTTransitionGlobalSetting.m in Sources */,
+				CE7995C021A4F4B400537B75 /* TSTDismissInteractiveTransition.m in Sources */,
+				CE7995C521A4F4B400537B75 /* TSTAnimator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +311,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = TSTTransition/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -367,6 +368,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = TSTTransition/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -380,7 +382,7 @@
 		CE7077D2219A7FB50080C054 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = D558U7U967;
@@ -406,7 +408,7 @@
 		CE7077D3219A7FB50080C054 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = D558U7U967;

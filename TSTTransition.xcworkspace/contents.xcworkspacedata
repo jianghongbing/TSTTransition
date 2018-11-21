@@ -8,7 +8,7 @@
       location = "group:README.md">
    </FileRef>
    <FileRef
-      location = "group:Framework/TSTTransition.xcodeproj">
+      location = "group:TSTTransition.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:TSTTransitionDemo/TSTTransitionDemo.xcodeproj">

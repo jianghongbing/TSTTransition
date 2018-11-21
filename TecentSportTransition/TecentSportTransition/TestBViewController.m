@@ -8,7 +8,7 @@
 
 #import "TestBViewController.h"
 #import "UIViewController+Utils.h"
-#import "UIViewController+TSTTransition.h"
+#import "TSTTransitionHeader.h"
 #import "FirstNavigationController.h"
 #import "SecondNavigationController.h"
 @interface TestBViewController ()<TSTInteractiveDismissTransitionDelegate>

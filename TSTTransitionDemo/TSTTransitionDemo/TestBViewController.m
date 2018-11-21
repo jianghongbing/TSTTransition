@@ -8,7 +8,7 @@
 
 #import "TestBViewController.h"
 #import "UIViewController+Utils.h"
-#import "UIViewController+TSTTransition.h"
+#import "TSTTransitionHeader.h"
 @interface TestBViewController()<UIGestureRecognizerDelegate>
 @property (nonatomic, strong) UIPanGestureRecognizer *panGestureRecognizer;
 @property (nonatomic, strong) UILabel *label;

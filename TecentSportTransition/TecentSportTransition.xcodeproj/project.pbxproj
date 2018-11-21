@@ -18,11 +18,11 @@
 		CE3A25BC2193CE90005D0F7F /* TestBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3A25BB2193CE90005D0F7F /* TestBViewController.m */; };
 		CE3A25BF2193CFBF005D0F7F /* UIViewController+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3A25BE2193CFBF005D0F7F /* UIViewController+Utils.m */; };
 		CE3A25C12193D4B7005D0F7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE3A25C02193D4B7005D0F7F /* Main.storyboard */; };
-		CE707828219A9AEE0080C054 /* TSTTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = CE70781D219A9AEE0080C054 /* TSTTransition.m */; };
-		CE707829219A9AEE0080C054 /* TSTTransitionGlobalSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = CE70781F219A9AEE0080C054 /* TSTTransitionGlobalSetting.m */; };
-		CE70782A219A9AEE0080C054 /* TSTAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = CE707820219A9AEE0080C054 /* TSTAnimator.m */; };
-		CE70782B219A9AEE0080C054 /* TSTDismissInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = CE707823219A9AEE0080C054 /* TSTDismissInteractiveTransition.m */; };
-		CE70782C219A9AEE0080C054 /* UIViewController+TSTTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = CE707827219A9AEE0080C054 /* UIViewController+TSTTransition.m */; };
+		CE7995EF21A4F5BA00537B75 /* TSTTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7995E221A4F5BA00537B75 /* TSTTransition.m */; };
+		CE7995F021A4F5BA00537B75 /* TSTTransitionGlobalSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7995E421A4F5BA00537B75 /* TSTTransitionGlobalSetting.m */; };
+		CE7995F121A4F5BA00537B75 /* TSTAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7995E521A4F5BA00537B75 /* TSTAnimator.m */; };
+		CE7995F221A4F5BA00537B75 /* TSTDismissInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7995E921A4F5BA00537B75 /* TSTDismissInteractiveTransition.m */; };
+		CE7995F421A4F5BB00537B75 /* UIViewController+TSTTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7995EE21A4F5BA00537B75 /* UIViewController+TSTTransition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,17 +46,19 @@
 		CE3A25BD2193CFBF005D0F7F /* UIViewController+Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIViewController+Utils.h"; path = "../../TSTTransitionDemo/TSTTransitionDemo/UIViewController+Utils.h"; sourceTree = "<group>"; };
 		CE3A25BE2193CFBF005D0F7F /* UIViewController+Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+Utils.m"; path = "../../TSTTransitionDemo/TSTTransitionDemo/UIViewController+Utils.m"; sourceTree = "<group>"; };
 		CE3A25C02193D4B7005D0F7F /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		CE70781D219A9AEE0080C054 /* TSTTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTTransition.m; sourceTree = "<group>"; };
-		CE70781E219A9AEE0080C054 /* TSTDismissInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTDismissInteractiveTransition.h; sourceTree = "<group>"; };
-		CE70781F219A9AEE0080C054 /* TSTTransitionGlobalSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTTransitionGlobalSetting.m; sourceTree = "<group>"; };
-		CE707820219A9AEE0080C054 /* TSTAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTAnimator.m; sourceTree = "<group>"; };
-		CE707821219A9AEE0080C054 /* UIViewController+TSTTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TSTTransition.h"; sourceTree = "<group>"; };
-		CE707822219A9AEE0080C054 /* UIViewController+TSTTransitionPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TSTTransitionPrivate.h"; sourceTree = "<group>"; };
-		CE707823219A9AEE0080C054 /* TSTDismissInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTDismissInteractiveTransition.m; sourceTree = "<group>"; };
-		CE707824219A9AEE0080C054 /* TSTTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTTransition.h; sourceTree = "<group>"; };
-		CE707825219A9AEE0080C054 /* TSTTransitionGlobalSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTTransitionGlobalSetting.h; sourceTree = "<group>"; };
-		CE707826219A9AEE0080C054 /* TSTAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTAnimator.h; sourceTree = "<group>"; };
-		CE707827219A9AEE0080C054 /* UIViewController+TSTTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TSTTransition.m"; sourceTree = "<group>"; };
+		CE7995E221A4F5BA00537B75 /* TSTTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTTransition.m; sourceTree = "<group>"; };
+		CE7995E321A4F5BA00537B75 /* TSTDismissInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTDismissInteractiveTransition.h; sourceTree = "<group>"; };
+		CE7995E421A4F5BA00537B75 /* TSTTransitionGlobalSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTTransitionGlobalSetting.m; sourceTree = "<group>"; };
+		CE7995E521A4F5BA00537B75 /* TSTAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTAnimator.m; sourceTree = "<group>"; };
+		CE7995E621A4F5BA00537B75 /* TSTTransitionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTTransitionHeader.h; sourceTree = "<group>"; };
+		CE7995E721A4F5BA00537B75 /* UIViewController+TSTTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TSTTransition.h"; sourceTree = "<group>"; };
+		CE7995E821A4F5BA00537B75 /* UIViewController+TSTTransitionPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TSTTransitionPrivate.h"; sourceTree = "<group>"; };
+		CE7995E921A4F5BA00537B75 /* TSTDismissInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTDismissInteractiveTransition.m; sourceTree = "<group>"; };
+		CE7995EA21A4F5BA00537B75 /* TSTTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTTransition.h; sourceTree = "<group>"; };
+		CE7995EB21A4F5BA00537B75 /* TSTTransitionGlobalSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTTransitionGlobalSetting.h; sourceTree = "<group>"; };
+		CE7995EC21A4F5BA00537B75 /* TSTAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTAnimator.h; sourceTree = "<group>"; };
+		CE7995ED21A4F5BA00537B75 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE7995EE21A4F5BA00537B75 /* UIViewController+TSTTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TSTTransition.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +91,7 @@
 		CE3A25932193C72A005D0F7F /* TecentSportTransition */ = {
 			isa = PBXGroup;
 			children = (
-				CE70781C219A9AEE0080C054 /* TSTTransition */,
+				CE7995E121A4F5BA00537B75 /* TSTTransition */,
 				CE3A25942193C72A005D0F7F /* AppDelegate.h */,
 				CE3A25952193C72A005D0F7F /* AppDelegate.m */,
 				CE3A259D2193C737005D0F7F /* Assets.xcassets */,
@@ -113,20 +115,22 @@
 			path = TecentSportTransition;
 			sourceTree = "<group>";
 		};
-		CE70781C219A9AEE0080C054 /* TSTTransition */ = {
+		CE7995E121A4F5BA00537B75 /* TSTTransition */ = {
 			isa = PBXGroup;
 			children = (
-				CE707826219A9AEE0080C054 /* TSTAnimator.h */,
-				CE707820219A9AEE0080C054 /* TSTAnimator.m */,
-				CE707824219A9AEE0080C054 /* TSTTransition.h */,
-				CE70781D219A9AEE0080C054 /* TSTTransition.m */,
-				CE70781E219A9AEE0080C054 /* TSTDismissInteractiveTransition.h */,
-				CE707823219A9AEE0080C054 /* TSTDismissInteractiveTransition.m */,
-				CE707825219A9AEE0080C054 /* TSTTransitionGlobalSetting.h */,
-				CE70781F219A9AEE0080C054 /* TSTTransitionGlobalSetting.m */,
-				CE707821219A9AEE0080C054 /* UIViewController+TSTTransition.h */,
-				CE707827219A9AEE0080C054 /* UIViewController+TSTTransition.m */,
-				CE707822219A9AEE0080C054 /* UIViewController+TSTTransitionPrivate.h */,
+				CE7995E221A4F5BA00537B75 /* TSTTransition.m */,
+				CE7995E321A4F5BA00537B75 /* TSTDismissInteractiveTransition.h */,
+				CE7995E421A4F5BA00537B75 /* TSTTransitionGlobalSetting.m */,
+				CE7995E521A4F5BA00537B75 /* TSTAnimator.m */,
+				CE7995E621A4F5BA00537B75 /* TSTTransitionHeader.h */,
+				CE7995E721A4F5BA00537B75 /* UIViewController+TSTTransition.h */,
+				CE7995E821A4F5BA00537B75 /* UIViewController+TSTTransitionPrivate.h */,
+				CE7995E921A4F5BA00537B75 /* TSTDismissInteractiveTransition.m */,
+				CE7995EA21A4F5BA00537B75 /* TSTTransition.h */,
+				CE7995EB21A4F5BA00537B75 /* TSTTransitionGlobalSetting.h */,
+				CE7995EC21A4F5BA00537B75 /* TSTAnimator.h */,
+				CE7995ED21A4F5BA00537B75 /* Info.plist */,
+				CE7995EE21A4F5BA00537B75 /* UIViewController+TSTTransition.m */,
 			);
 			name = TSTTransition;
 			path = ../../TSTTransition;
@@ -203,18 +207,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE3A25B62193CA45005D0F7F /* TestAViewController.m in Sources */,
-				CE70782A219A9AEE0080C054 /* TSTAnimator.m in Sources */,
+				CE7995F121A4F5BA00537B75 /* TSTAnimator.m in Sources */,
 				CE3A25A42193C737005D0F7F /* main.m in Sources */,
-				CE707829219A9AEE0080C054 /* TSTTransitionGlobalSetting.m in Sources */,
+				CE7995F021A4F5BA00537B75 /* TSTTransitionGlobalSetting.m in Sources */,
 				CE3A25962193C72A005D0F7F /* AppDelegate.m in Sources */,
 				CE3A25B32193CA0E005D0F7F /* SecondNavigationController.m in Sources */,
 				CE3A25BF2193CFBF005D0F7F /* UIViewController+Utils.m in Sources */,
 				CE3A25B02193C9F1005D0F7F /* FirstNavigationController.m in Sources */,
-				CE70782C219A9AEE0080C054 /* UIViewController+TSTTransition.m in Sources */,
-				CE70782B219A9AEE0080C054 /* TSTDismissInteractiveTransition.m in Sources */,
+				CE7995F421A4F5BB00537B75 /* UIViewController+TSTTransition.m in Sources */,
+				CE7995F221A4F5BA00537B75 /* TSTDismissInteractiveTransition.m in Sources */,
 				CE3A25BC2193CE90005D0F7F /* TestBViewController.m in Sources */,
 				CE3A25AD2193C8DF005D0F7F /* TabbarController.m in Sources */,
-				CE707828219A9AEE0080C054 /* TSTTransition.m in Sources */,
+				CE7995EF21A4F5BA00537B75 /* TSTTransition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

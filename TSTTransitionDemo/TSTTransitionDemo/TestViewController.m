@@ -8,7 +8,7 @@
 
 #import "TestViewController.h"
 #import "UIViewController+Utils.h"
-#import "UIViewController+TSTTransition.h"
+#import "TSTTransitionHeader.h"
 @interface TestViewController ()<TSTInteractiveDismissTransitionDelegate>
 
 @end
